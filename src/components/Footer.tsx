@@ -1,122 +1,124 @@
-import { MapPin, Building, Users, Mail } from "lucide-react";
-import { useLanguage } from "@/contexts/LanguageContext";
+import { Building2, Mail, MapPin, Phone } from "lucide-react";
 
 const Footer = () => {
-  const { t } = useLanguage();
-  
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <footer className="bg-foreground text-background py-16">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div className="grid md:grid-cols-4 gap-8">
           {/* Company Info */}
-          <div className="lg:col-span-2">
-            <div className="flex items-center space-x-2 mb-6">
-              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                <div className="w-6 h-6 bg-white rounded-full opacity-90"></div>
+          <div className="md:col-span-2">
+            <div className="flex items-center space-x-2 mb-4">
+              <div className="w-8 h-8 bg-gradient-primary rounded-full flex items-center justify-center">
+                <span className="text-primary-foreground font-bold text-sm">D</span>
               </div>
-              <div>
-                <h3 className="text-xl font-bold">大凡健康股份有限公司</h3>
-                <p className="text-sm opacity-80">Dafen Health Co., Ltd.</p>
-              </div>
+              <span className="text-xl font-bold">Dafen Health Co., Ltd.</span>
             </div>
-            <p className="text-background/80 leading-relaxed mb-6 max-w-md">
-              {t("footer_company_desc")}
+            <p className="text-muted mb-6 leading-relaxed">
+              Dedicated to applying cutting-edge biotechnology with strong growth potential. 
+              With "Biotech Innovation × Regenerative Medicine × Health Future" as our core, 
+              committed to integrating clinical needs with R&D capabilities.
             </p>
-            <div className="space-y-3">
-              <div className="flex items-center space-x-3">
-                <MapPin className="w-4 h-4 text-primary" />
-                <span className="text-sm">{t("contact_address")} {t("contact_address_note")}</span>
+            
+            <div className="space-y-2 text-sm">
+              <div className="flex items-center space-x-2">
+                <Building2 className="w-4 h-4" />
+                <span>Industry: Biochemical Technology R&D</span>
               </div>
-              <div className="flex items-center space-x-3">
-                <Users className="w-4 h-4 text-primary" />
-                <span className="text-sm">{t("footer_contact_person")}</span>
+              <div className="flex items-center space-x-2">
+                <span className="w-4 h-4 text-center">💰</span>
+                <span>Capital: NT$196.6 Million</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <span className="w-4 h-4 text-center">👥</span>
+                <span>Employees: 15 People</span>
               </div>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-6">{t("footer_quick_links")}</h4>
-            <ul className="space-y-3">
-              <li><a href="#home" className="text-background/80 hover:text-primary transition-colors">{t("nav_home")}</a></li>
-              <li><a href="#products" className="text-background/80 hover:text-primary transition-colors">{t("nav_products")}</a></li>
-              <li><a href="#research" className="text-background/80 hover:text-primary transition-colors">{t("nav_research")}</a></li>
-              <li><a href="#about" className="text-background/80 hover:text-primary transition-colors">{t("nav_about")}</a></li>
-              <li><a href="#contact" className="text-background/80 hover:text-primary transition-colors">{t("nav_contact")}</a></li>
-            </ul>
+            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+            <div className="space-y-2">
+              <button
+                onClick={() => scrollToSection("home")}
+                className="block text-muted hover:text-background transition-colors"
+              >
+                Home
+              </button>
+              <button
+                onClick={() => scrollToSection("about")}
+                className="block text-muted hover:text-background transition-colors"
+              >
+                About Us
+              </button>
+              <button
+                onClick={() => scrollToSection("technology")}
+                className="block text-muted hover:text-background transition-colors"
+              >
+                Technology
+              </button>
+              <button
+                onClick={() => scrollToSection("partnerships")}
+                className="block text-muted hover:text-background transition-colors"
+              >
+                Partnerships
+              </button>
+              <button
+                onClick={() => scrollToSection("news")}
+                className="block text-muted hover:text-background transition-colors"
+              >
+                News
+              </button>
+              <button
+                onClick={() => scrollToSection("contact")}
+                className="block text-muted hover:text-background transition-colors"
+              >
+                Contact
+              </button>
+            </div>
           </div>
 
+          {/* Services */}
           <div>
-            <h4 className="text-lg font-semibold mb-6">{t("footer_services")}</h4>
-            <ul className="space-y-3">
-              <li><span className="text-background/80">{t("footer_service_1")}</span></li>
-              <li><span className="text-background/80">{t("footer_service_2")}</span></li>
-              <li><span className="text-background/80">{t("footer_service_3")}</span></li>
-              <li><span className="text-background/80">{t("footer_service_4")}</span></li>
-              <li><span className="text-background/80">{t("footer_service_5")}</span></li>
-            </ul>
-          </div>
-        </div>
-
-        {/* Company Details */}
-        <div className="border-t border-background/20 pt-8 mb-8">
-          <div className="grid md:grid-cols-3 gap-6 text-sm">
-            <div className="flex items-center space-x-3">
-              <Building className="w-4 h-4 text-primary" />
-              <div>
-                <span className="text-background/60">{t("footer_industry_label")}</span>
-                <span className="text-background/80">{t("footer_industry_value")}</span>
-              </div>
+            <h3 className="text-lg font-semibold mb-4">Core Services</h3>
+            <div className="space-y-2 text-muted">
+              <div>Stem Cell Drug Development</div>
+              <div>Exosome Drug Development</div>
+              <div>Regenerative Medicine Technology</div>
+              <div>Medical Consulting Services</div>
+              <div>Industry-Academia Collaboration</div>
             </div>
-            <div className="flex items-center space-x-3">
-              <Building className="w-4 h-4 text-primary" />
-              <div>
-                <span className="text-background/60">{t("footer_capital_label")}</span>
-                <span className="text-background/80">{t("footer_capital_value")}</span>
-              </div>
-            </div>
-            <div className="flex items-center space-x-3">
-              <Users className="w-4 h-4 text-primary" />
-              <div>
-                <span className="text-background/60">{t("footer_employees_label")}</span>
-                <span className="text-background/80">{t("footer_employees_value")}</span>
+            
+            <div className="mt-6">
+              <div className="text-sm text-muted">
+                <div className="flex items-center space-x-2 mb-2">
+                  <Mail className="w-4 h-4" />
+                  <span>Contact: Ms. Chung</span>
+                </div>
+                <div className="flex items-start space-x-2">
+                  <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                  <span>Taichung Industrial Park, Taiwan</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Core Values */}
-        <div className="border-t border-background/20 pt-8 mb-8">
-          <h4 className="text-lg font-semibold mb-4">{t("values_title")}</h4>
-          <div className="grid md:grid-cols-5 gap-4 text-sm">
-            <div className="text-center">
-              <div className="text-primary font-medium">{t("value_1_title")}</div>
-              <div className="text-background/60 text-xs mt-1">Professional, Safe</div>
+        <div className="border-t border-muted/20 mt-12 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="text-sm text-muted mb-4 md:mb-0">
+              © 2024 Dafen Health Co., Ltd. All rights reserved
             </div>
-            <div className="text-center">
-              <div className="text-primary font-medium">{t("value_2_title")}</div>
-              <div className="text-background/60 text-xs mt-1">Teamwork, Trust</div>
+            <div className="text-sm text-muted text-center md:text-right">
+              Focused on Stem Cell & Exosome Drug Development | Leading Innovation in Regenerative Medicine
             </div>
-            <div className="text-center">
-              <div className="text-primary font-medium">{t("value_3_title")}</div>
-              <div className="text-background/60 text-xs mt-1">Efficiency</div>
-            </div>
-            <div className="text-center">
-              <div className="text-primary font-medium">{t("value_4_title")}</div>
-              <div className="text-background/60 text-xs mt-1">Shared Growth</div>
-            </div>
-            <div className="text-center">
-              <div className="text-primary font-medium">{t("value_5_title")}</div>
-              <div className="text-background/60 text-xs mt-1">Transparency</div>
-            </div>
-          </div>
-        </div>
-
-        {/* Copyright */}
-        <div className="border-t border-background/20 pt-8 text-center">
-          <div className="text-sm text-background/60">
-            <p className="mb-2">{t("footer_copyright")}</p>
-            <p>{t("footer_tagline")}</p>
           </div>
         </div>
       </div>

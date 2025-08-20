@@ -1,184 +1,168 @@
-import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";  
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { 
-  MapPin, 
-  Phone, 
-  Mail, 
-  Clock,
-  Building,
-  Users,
-  Send
-} from "lucide-react";
-import { useLanguage } from "@/contexts/LanguageContext";
+import { MapPin, Phone, Mail, Building2, Users, CheckCircle } from "lucide-react";
 
 const ContactSection = () => {
-  const { t } = useLanguage();
-  
   return (
-    <section id="contact" className="py-20 bg-muted">
+    <section id="contact" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
-        {/* Section Header */}
+        {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center space-x-2 bg-primary-light text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
-            <Mail className="w-4 h-4" />
-            <span>{t("contact_badge")}</span>
-          </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            {t("contact_title")}
+          <Badge variant="outline" className="mb-4 text-primary border-primary">
+            Contact Us
+          </Badge>
+          <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
+            Partner With Us in Innovation
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            {t("contact_subtitle")}
+            Ready to explore collaboration opportunities in regenerative medicine? 
+            Contact our team to discuss partnerships and professional consulting.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Information */}
-          <div className="space-y-8">
-            <div>
-              <h3 className="text-2xl font-bold text-foreground mb-6">{t("contact_info_title")}</h3>
-              
-              <div className="space-y-6">
-                <Card className="shadow-card-soft hover:shadow-glow transition-all duration-300">
-                  <CardContent className="p-6">
-                    <div className="flex items-start space-x-4">
-                      <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                        <MapPin className="w-6 h-6 text-primary" />
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-foreground mb-2">{t("contact_address_title")}</h4>
-                        <p className="text-muted-foreground">{t("contact_address")}</p>
-                        <p className="text-sm text-muted-foreground mt-1">{t("contact_address_note")}</p>
-                      </div>
+          <div>
+            <h3 className="text-2xl font-bold text-foreground mb-8">Get in Touch</h3>
+            
+            <div className="space-y-6 mb-8">
+              <Card className="border-0 shadow-card-soft">
+                <CardContent className="p-6">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                      <MapPin className="w-6 h-6 text-primary" />
                     </div>
-                  </CardContent>
-                </Card>
+                    <div>
+                      <h4 className="font-semibold mb-2">Company Address</h4>
+                      <p className="text-muted-foreground">
+                        No. 2-1, 7th Rd., Industrial Park<br />
+                        Xitun District, Taichung City<br />
+                        Taiwan (Taichung Industrial Park)
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
 
-                <Card className="shadow-card-soft hover:shadow-glow transition-all duration-300">
-                  <CardContent className="p-6">
-                    <div className="flex items-start space-x-4">
-                      <div className="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                        <Users className="w-6 h-6 text-secondary" />
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-foreground mb-2">{t("contact_person_title")}</h4>
-                        <p className="text-muted-foreground">{t("contact_person")}</p>
-                        <p className="text-sm text-muted-foreground mt-1">{t("contact_person_note")}</p>
-                      </div>
+              <Card className="border-0 shadow-card-soft">
+                <CardContent className="p-6">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                      <Users className="w-6 h-6 text-secondary" />
                     </div>
-                  </CardContent>
-                </Card>
+                    <div>
+                      <h4 className="font-semibold mb-2">Contact Person</h4>
+                      <p className="text-muted-foreground">
+                        Ms. Chung<br />
+                        Professional Consulting Services
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
 
-                <Card className="shadow-card-soft hover:shadow-glow transition-all duration-300">
-                  <CardContent className="p-6">
-                    <div className="flex items-start space-x-4">
-                      <div className="w-12 h-12 bg-success/10 rounded-full flex items-center justify-center flex-shrink-0">
-                        <Building className="w-6 h-6 text-success" />
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-foreground mb-2">{t("contact_industry_title")}</h4>
-                        <p className="text-muted-foreground">{t("contact_industry")}</p>
-                        <p className="text-sm text-muted-foreground mt-1">{t("contact_industry_note")}</p>
-                      </div>
+              <Card className="border-0 shadow-card-soft">
+                <CardContent className="p-6">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-success/10 rounded-full flex items-center justify-center flex-shrink-0">
+                      <Building2 className="w-6 h-6 text-success" />
                     </div>
-                  </CardContent>
-                </Card>
-              </div>
+                    <div>
+                      <h4 className="font-semibold mb-2">Industry Focus</h4>
+                      <p className="text-muted-foreground">
+                        Biochemical Technology R&D<br />
+                        Biotechnology Research
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
 
-            {/* Quick Info */}
-            <Card className="bg-gradient-subtle shadow-card-soft">
-              <CardContent className="p-8">
-                <h4 className="text-xl font-bold text-foreground mb-4">{t("why_choose_title")}</h4>
+            {/* Why Choose Us */}
+            <Card className="border-0 shadow-card-soft">
+              <CardHeader>
+                <CardTitle>Why Partner with Dafen Health?</CardTitle>
+              </CardHeader>
+              <CardContent>
                 <div className="space-y-3">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-primary rounded-full"></div>
-                    <span className="text-foreground">{t("why_choose_1")}</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-secondary rounded-full"></div>
-                    <span className="text-foreground">{t("why_choose_2")}</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-success rounded-full"></div>
-                    <span className="text-foreground">{t("why_choose_3")}</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-warning rounded-full"></div>
-                    <span className="text-foreground">{t("why_choose_4")}</span>
-                  </div>
+                  {[
+                    "Professional regenerative medicine R&D team",
+                    "Industry-academia collaboration with national hospitals", 
+                    "International standard quality management",
+                    "Innovative stem cell and exosome technology"
+                  ].map((item, index) => (
+                    <div key={index} className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 h-5 text-success flex-shrink-0" />
+                      <span className="text-muted-foreground">{item}</span>
+                    </div>
+                  ))}
                 </div>
               </CardContent>
             </Card>
           </div>
 
           {/* Contact Form */}
-          <Card className="shadow-card-soft">
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-bold text-foreground mb-6">{t("form_title")}</h3>
-              
-              <form className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">
-                      {t("form_name")} *
-                    </label>
-                    <Input placeholder={t("form_placeholder_name")} required />
+          <div>
+            <Card className="border-0 shadow-card-soft">
+              <CardHeader>
+                <CardTitle>Send us a Message</CardTitle>
+                <p className="text-muted-foreground">
+                  Fill out the form below and we'll get back to you within 1-2 business days.
+                </p>
+              </CardHeader>
+              <CardContent>
+                <form className="space-y-6">
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div className="space-y-2">
+                      <label className="text-sm font-medium">Name *</label>
+                      <Input placeholder="Enter your full name" />
+                    </div>
+                    <div className="space-y-2">
+                      <label className="text-sm font-medium">Company/Organization</label>
+                      <Input placeholder="Your company or organization" />
+                    </div>
                   </div>
-                  <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">
-                      {t("form_company")}
-                    </label>
-                    <Input placeholder={t("form_placeholder_company")} />
+                  
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div className="space-y-2">
+                      <label className="text-sm font-medium">Email *</label>
+                      <Input type="email" placeholder="your.email@example.com" />
+                    </div>
+                    <div className="space-y-2">
+                      <label className="text-sm font-medium">Phone</label>
+                      <Input placeholder="Your phone number" />
+                    </div>
                   </div>
-                </div>
 
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">
-                      {t("form_email")} *
-                    </label>
-                    <Input type="email" placeholder={t("form_placeholder_email")} required />
+                  <div className="space-y-2">
+                    <label className="text-sm font-medium">Subject *</label>
+                    <Input placeholder="Brief subject of your inquiry" />
                   </div>
-                  <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">
-                      {t("form_phone")}
-                    </label>
-                    <Input placeholder={t("form_placeholder_phone")} />
+
+                  <div className="space-y-2">
+                    <label className="text-sm font-medium">Message *</label>  
+                    <Textarea 
+                      placeholder="Please describe your needs, interests, or questions in detail..."
+                      className="min-h-[120px]"
+                    />
                   </div>
-                </div>
 
-                <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">
-                    {t("form_subject")}
-                  </label>
-                  <Input placeholder={t("form_placeholder_subject")} />
-                </div>
+                  <div className="text-sm text-muted-foreground bg-muted/50 p-4 rounded-lg">
+                    <Mail className="w-4 h-4 inline mr-2" />
+                    We will respond to your inquiry within 1-2 business days.
+                  </div>
 
-                <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">
-                    {t("form_message")} *
-                  </label>
-                  <Textarea 
-                    placeholder={t("form_placeholder_message")}
-                    rows={5}
-                    required
-                  />
-                </div>
-
-                <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-                  <Clock className="w-4 h-4" />
-                  <span>{t("form_response_time")}</span>
-                </div>
-
-                <Button type="submit" size="lg" className="w-full">
-                  <Send className="w-4 h-4 mr-2" />
-                  {t("form_submit")}
-                </Button>
-              </form>
-            </CardContent>
-          </Card>
+                  <Button type="submit" size="lg" className="w-full shadow-medical">
+                    Send Message
+                  </Button>
+                </form>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </div>
     </section>

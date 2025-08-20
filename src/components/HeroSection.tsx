@@ -1,10 +1,14 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Microscope, Heart, Shield } from "lucide-react";
-import { useLanguage } from "@/contexts/LanguageContext";
-import heroImage from "@/assets/hero-lab.jpg";
+import { ArrowRight, Microscope, Shield, Award } from "lucide-react";
+import heroImage from "@/assets/pharma-lab.jpg";
 
 const HeroSection = () => {
-  const { t } = useLanguage();
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   
   return (
     <section id="home" className="relative min-h-screen flex items-center bg-gradient-subtle overflow-hidden">
@@ -12,10 +16,10 @@ const HeroSection = () => {
       <div className="absolute inset-0 z-0">
         <img 
           src={heroImage} 
-          alt="大凡健康實驗室" 
-          className="w-full h-full object-cover opacity-20"
+          alt="Dafen Health Pharmaceutical Laboratory" 
+          className="w-full h-full object-cover opacity-30"
         />
-        <div className="absolute inset-0 bg-gradient-hero opacity-60"></div>
+        <div className="absolute inset-0 bg-gradient-hero opacity-70"></div>
       </div>
 
       {/* Content */}
@@ -24,32 +28,32 @@ const HeroSection = () => {
           {/* Badge */}
           <div className="inline-flex items-center space-x-2 bg-primary-light text-primary px-4 py-2 rounded-full text-sm font-medium mb-6 animate-fade-in">
             <Microscope className="w-4 h-4" />
-            <span>{t("hero_badge")}</span>
+            <span>Leading Regenerative Medicine Innovation</span>
           </div>
 
           {/* Main Heading */}
           <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 animate-fade-in">
-            {t("hero_title_1")}
-            <span className="text-primary"> {t("hero_title_2")} </span>
-            {t("hero_title_3")}
-            <span className="text-secondary"> {t("hero_title_4")} </span>
+            Advancing
+            <span className="text-primary"> Stem Cell </span>
+            &
+            <span className="text-secondary"> Exosome </span>
             <br />
-            {t("hero_title_5")}
+            Drug Development
           </h1>
 
           {/* Subtitle */}
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed animate-slide-in-right">
-            {t("hero_subtitle")}
+            Dafen Health is an innovative biotechnology company focused on cutting-edge regenerative medicine research and development, creating safe, effective, and high-quality therapeutic solutions.
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-scale-in">
-            <Button size="lg" className="text-lg px-8 py-6 shadow-medical">
-              {t("hero_cta_products")}
+            <Button size="lg" className="text-lg px-8 py-6 shadow-medical" onClick={() => scrollToSection("technology")}>
+              Our Technology
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
-            <Button variant="outline" size="lg" className="text-lg px-8 py-6">
-              {t("hero_cta_contact")}
+            <Button variant="outline" size="lg" className="text-lg px-8 py-6" onClick={() => scrollToSection("contact")}>
+              Partner With Us
             </Button>
           </div>
 
@@ -59,24 +63,24 @@ const HeroSection = () => {
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Microscope className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="text-lg font-semibold mb-2">{t("hero_feature_1_title")}</h3>
-              <p className="text-muted-foreground">{t("hero_feature_1_desc")}</p>
+              <h3 className="text-lg font-semibold mb-2">Advanced R&D</h3>
+              <p className="text-muted-foreground">Cutting-edge biotechnology research capabilities</p>
             </div>
             
             <div className="text-center">
               <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Heart className="w-8 h-8 text-secondary" />
+                <Shield className="w-8 h-8 text-secondary" />
               </div>
-              <h3 className="text-lg font-semibold mb-2">{t("hero_feature_2_title")}</h3>
-              <p className="text-muted-foreground">{t("hero_feature_2_desc")}</p>
+              <h3 className="text-lg font-semibold mb-2">GMP Standards</h3>
+              <p className="text-muted-foreground">International quality and safety compliance</p>
             </div>
             
             <div className="text-center">
               <div className="w-16 h-16 bg-success/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="w-8 h-8 text-success" />
+                <Award className="w-8 h-8 text-success" />
               </div>
-              <h3 className="text-lg font-semibold mb-2">{t("hero_feature_3_title")}</h3>
-              <p className="text-muted-foreground">{t("hero_feature_3_desc")}</p>
+              <h3 className="text-lg font-semibold mb-3">Academic Excellence</h3>
+              <p className="text-muted-foreground">Partnerships with leading medical institutions</p>
             </div>
           </div>
         </div>
