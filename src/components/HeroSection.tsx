@@ -27,7 +27,7 @@ const HeroSection = () => {
           </div>
 
           {/* Main Heading */}
-          <h1 className="md:text-6xl font-bold text-foreground mb-6 animate-fade-in py-[20px] text-5xl">
+          <h1 className="md:text-6xl font-bold text-white mb-6 animate-fade-in py-[20px] text-5xl">
             Advancing
             <span className="text-primary"> Stem Cell </span>
             &
