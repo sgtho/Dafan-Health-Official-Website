@@ -53,31 +53,7 @@ const HeroSection = () => {
           </div>
 
           {/* Key Features */}
-          <div className="grid md:grid-cols-3 gap-8 max-w-3xl mx-auto animate-fade-in">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Microscope className="w-8 h-8 text-primary" />
-              </div>
-              <h3 className="text-lg font-semibold mb-2">Advanced R&D</h3>
-              <p className="text-muted-foreground">Cutting-edge biotechnology research capabilities</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="w-8 h-8 text-secondary" />
-              </div>
-              <h3 className="text-lg font-semibold mb-2">GMP Standards</h3>
-              <p className="text-muted-foreground">International quality and safety compliance</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-success/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Award className="w-8 h-8 text-success" />
-              </div>
-              <h3 className="text-lg font-semibold mb-3">Academic Excellence</h3>
-              <p className="text-muted-foreground">Partnerships with leading medical institutions</p>
-            </div>
-          </div>
+          
         </div>
       </div>
 
