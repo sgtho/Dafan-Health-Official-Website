@@ -14,7 +14,7 @@ const Navigation = () => {
   };
   return <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16 bg-slate-100">
+        <div className="flex items-center justify-between h-16 bg-slate-50">
           {/* Logo */}
           <div className="flex items-center space-x-3">
             <img src="/lovable-uploads/732bdfe2-ef82-4065-a908-3222b6f1142f.png" alt="Dafen Health Logo" className="h-8 w-auto" />
