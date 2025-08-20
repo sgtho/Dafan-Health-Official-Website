@@ -1,11 +1,8 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import LanguageSwitcher from "@/components/LanguageSwitcher";
-import { useLanguage } from "@/contexts/LanguageContext";
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const { t } = useLanguage();
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -27,27 +24,14 @@ const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <button onClick={() => scrollToSection("home")} className="text-muted-foreground hover:text-primary transition-colors">
-              {t("nav.home")}
+              Home
             </button>
-            <button onClick={() => scrollToSection("about")} className="text-muted-foreground hover:text-primary transition-colors">
-              {t("nav.about")}
-            </button>
-            <button onClick={() => scrollToSection("technology")} className="text-muted-foreground hover:text-primary transition-colors">
-              {t("nav.technology")}
-            </button>
-            <button onClick={() => scrollToSection("partnerships")} className="text-muted-foreground hover:text-primary transition-colors">
-              {t("nav.partnerships")}
-            </button>
-            <button onClick={() => scrollToSection("news")} className="text-muted-foreground hover:text-primary transition-colors">
-              {t("nav.news")}
-            </button>
-            <button onClick={() => scrollToSection("contact")} className="text-muted-foreground hover:text-primary transition-colors">
-              {t("nav.contact")}
-            </button>
-            <LanguageSwitcher />
-            <Button onClick={() => scrollToSection("contact")} size="sm">
-              {t("nav.getInTouch")}
-            </Button>
+            <button onClick={() => scrollToSection("about")} className="text-muted-foreground hover:text-primary transition-colors">Home</button>
+            <button onClick={() => scrollToSection("technology")} className="text-muted-foreground hover:text-primary transition-colors">About</button>
+            <button onClick={() => scrollToSection("partnerships")} className="text-muted-foreground hover:text-primary transition-colors">Technology</button>
+            <button onClick={() => scrollToSection("news")} className="text-muted-foreground hover:text-primary transition-colors">Partnerships</button>
+            <button onClick={() => scrollToSection("contact")} className="text-muted-foreground hover:text-primary transition-colors">News</button>
+            <Button onClick={() => scrollToSection("contact")} size="sm">Contact</Button>
           </div>
 
           {/* Mobile menu button */}
@@ -62,27 +46,26 @@ const Navigation = () => {
         {isOpen && <div className="md:hidden bg-background border-t border-border">
             <div className="px-2 pt-2 pb-3 space-y-1">
               <button onClick={() => scrollToSection("home")} className="block px-3 py-2 text-muted-foreground hover:text-primary transition-colors w-full text-left">
-                {t("nav.home")}
+                Home
               </button>
               <button onClick={() => scrollToSection("about")} className="block px-3 py-2 text-muted-foreground hover:text-primary transition-colors w-full text-left">
-                {t("nav.about")}
+                About
               </button>
               <button onClick={() => scrollToSection("technology")} className="block px-3 py-2 text-muted-foreground hover:text-primary transition-colors w-full text-left">
-                {t("nav.technology")}
+                Technology
               </button>
               <button onClick={() => scrollToSection("partnerships")} className="block px-3 py-2 text-muted-foreground hover:text-primary transition-colors w-full text-left">
-                {t("nav.partnerships")}
+                Partnerships
               </button>
               <button onClick={() => scrollToSection("news")} className="block px-3 py-2 text-muted-foreground hover:text-primary transition-colors w-full text-left">
-                {t("nav.news")}
+                News
               </button>
               <button onClick={() => scrollToSection("contact")} className="block px-3 py-2 text-muted-foreground hover:text-primary transition-colors w-full text-left">
-                {t("nav.contact")}
+                Contact
               </button>
-              <div className="px-3 py-2 flex flex-col space-y-2">
-                <LanguageSwitcher />
+              <div className="px-3 py-2">
                 <Button onClick={() => scrollToSection("contact")} size="sm" className="w-full">
-                  {t("nav.getInTouch")}
+                  Get in Touch
                 </Button>
               </div>
             </div>

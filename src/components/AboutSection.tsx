@@ -2,11 +2,11 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Building2, Users, MapPin, TrendingUp, Target, Handshake } from "lucide-react";
 const AboutSection = () => {
-  return <section id="about" className="py-20 bg-muted/30">
+  return <section id="about" className="bg-muted/30 py-0">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <Badge variant="outline" className="mb-4 text-primary border-primary">
+          <Badge variant="outline" className="mb-4 text-primary border-primary py-0 my-[20px]">
             About Dafen Health
           </Badge>
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
@@ -53,41 +53,9 @@ const AboutSection = () => {
         </div>
 
         {/* Core Values */}
-        <div className="text-center mb-12">
-          <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-            Our Core Values
-          </h3>
-          <p className="text-muted-foreground mb-8">
-            Five fundamental principles that guide our pursuit of excellence in biotechnology
-          </p>
-        </div>
+        
 
-        <div className="grid md:grid-cols-5 gap-6">
-          {[{
-          title: "Quality First",
-          description: "Professional, Safe, Stable, and Effective"
-        }, {
-          title: "Loyalty & Trust",
-          description: "Teamwork, Core Values, Mutual Trust"
-        }, {
-          title: "Efficiency",
-          description: "Lean Management, Flat Organization, Resource Optimization"
-        }, {
-          title: "Shared Growth",
-          description: "Mutual Benefit, Respect & Inclusion, Team Success"
-        }, {
-          title: "Transparency",
-          description: "Information Transparency, Trustful Communication, Fair Mechanisms"
-        }].map((value, index) => <Card key={index} className="text-center border-0 shadow-card-soft hover:shadow-medical transition-shadow">
-              <CardContent className="p-6">
-                <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4 text-primary-foreground font-bold">
-                  {index + 1}
-                </div>
-                <h4 className="font-semibold mb-2">{value.title}</h4>
-                <p className="text-sm text-muted-foreground">{value.description}</p>
-              </CardContent>
-            </Card>)}
-        </div>
+        
       </div>
     </section>;
 };
