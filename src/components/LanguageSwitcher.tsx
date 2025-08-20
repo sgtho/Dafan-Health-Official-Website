@@ -1,33 +1,30 @@
-import { Button } from "@/components/ui/button";
-import { Globe } from "lucide-react";
-import { useLanguage } from "@/contexts/LanguageContext";
+import { useTranslation } from "react-i18next";
+import { Button } from "@/components/ui/button"; // Adjust path if needed
 
-const LanguageSwitcher = () => {
-  const { language, setLanguage } = useLanguage();
+const languages = [
+  { code: "en", label: "English" },
+  { code: "zh-TW", label: "繁體中文" },
+  { code: "th", label: "ไทย" },
+  { code: "ja", label: "日本語" },
+  { code: "fr", label: "Français" },
+  { code: "es", label: "Español" }
+];
+
+export default function LanguageSwitcher() {
+  const { i18n, t } = useTranslation();
 
   return (
-    <div className="flex items-center space-x-2">
-      <Globe className="w-4 h-4 text-muted-foreground" />
-      <div className="flex rounded-md border border-border overflow-hidden">
+    <div className="flex flex-wrap gap-2 my-2">
+      <span className="mr-2">{t("switch_language")}:</span>
+      {languages.map(lang => (
         <Button
-          variant={language === "zh" ? "default" : "ghost"}
-          size="sm"
-          className="rounded-none px-3 py-1 text-xs h-8"
-          onClick={() => setLanguage("zh")}
+          key={lang.code}
+          variant={i18n.language === lang.code ? "default" : "outline"}
+          onClick={() => i18n.changeLanguage(lang.code)}
         >
-          中文
+          {lang.label}
         </Button>
-        <Button
-          variant={language === "en" ? "default" : "ghost"}
-          size="sm"
-          className="rounded-none px-3 py-1 text-xs h-8"
-          onClick={() => setLanguage("en")}
-        >
-          EN
-        </Button>
-      </div>
+      ))}
     </div>
   );
-};
-
-export default LanguageSwitcher;
+}
