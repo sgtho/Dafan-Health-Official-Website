@@ -14,7 +14,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="md:col-span-2">
             <div className="flex items-center space-x-3 mb-4">
-              
+              <img src="/lovable-uploads/732bdfe2-ef82-4065-a908-3222b6f1142f.png" alt="Dafen Health Logo" className="h-6 w-auto brightness-0 invert" />
               <span className="text-xl font-bold">Dafen Health Co., Ltd.</span>
             </div>
             <p className="text-muted mb-6 leading-relaxed">

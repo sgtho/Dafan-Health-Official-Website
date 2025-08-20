@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Microscope, Shield, Award } from "lucide-react";
-import heroImage from "@/assets/pharma-lab.jpg";
+import heroImage from "@/assets/stem-cell-background.jpg";
 const HeroSection = () => {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -10,11 +10,11 @@ const HeroSection = () => {
       });
     }
   };
-  return <section id="home" className="relative min-h-screen flex items-center bg-gradient-subtle overflow-hidden">
+  return <section id="home" className="relative min-h-screen flex items-center bg-slate-900 overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <img src={heroImage} alt="Dafen Health Pharmaceutical Laboratory" className="w-full h-full object-cover opacity-30" />
-        <div className="absolute inset-0 bg-gradient-hero opacity-70"></div>
+        <img src={heroImage} alt="Stem Cell and Exosome Research Background" className="w-full h-full object-cover opacity-60" />
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-900/70 to-slate-800/90"></div>
       </div>
 
       {/* Content */}
