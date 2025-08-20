@@ -1,16 +1,19 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone, Mail } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { t } = useLanguage();
 
   const navItems = [
-    { label: "首頁", href: "#home" },
-    { label: "產品服務", href: "#products" },
-    { label: "研發實力", href: "#research" },
-    { label: "公司介紹", href: "#about" },
-    { label: "聯繫我們", href: "#contact" },
+    { label: t("nav_home"), href: "#home" },
+    { label: t("nav_products"), href: "#products" },
+    { label: t("nav_research"), href: "#research" },
+    { label: t("nav_about"), href: "#about" },
+    { label: t("nav_contact"), href: "#contact" },
   ];
 
   return (
@@ -41,14 +44,15 @@ const Navigation = () => {
             ))}
           </div>
 
-          {/* Contact Info */}
+          {/* Contact Info & Language Switcher */}
           <div className="hidden lg:flex items-center space-x-4">
+            <LanguageSwitcher />
             <div className="flex items-center space-x-2 text-sm text-muted-foreground">
               <Phone className="w-4 h-4" />
-              <span>聯繫諮詢</span>
+              <span>{t("nav_contact_info")}</span>
             </div>
             <Button variant="default" size="sm">
-              立即聯繫
+              {t("nav_contact_now")}
             </Button>
           </div>
 
@@ -67,6 +71,9 @@ const Navigation = () => {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-border animate-fade-in">
             <div className="flex flex-col space-y-4">
+              <div className="px-2">
+                <LanguageSwitcher />
+              </div>
               {navItems.map((item) => (
                 <a
                   key={item.label}
@@ -79,7 +86,7 @@ const Navigation = () => {
               ))}
               <div className="pt-4 border-t border-border">
                 <Button variant="default" size="sm" className="w-full">
-                  立即聯繫
+                  {t("nav_contact_now")}
                 </Button>
               </div>
             </div>

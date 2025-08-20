@@ -12,44 +12,47 @@ import {
   Users2,
   Eye
 } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const AboutSection = () => {
+  const { t } = useLanguage();
+  
   const stats = [
-    { icon: Building2, label: "資本額", value: "1.97億元", color: "text-primary" },
-    { icon: Users, label: "專業團隊", value: "15人", color: "text-secondary" },
-    { icon: MapPin, label: "營運據點", value: "台中工業區", color: "text-success" },
-    { icon: TrendingUp, label: "成長潛力", value: "快速發展", color: "text-warning" },
+    { icon: Building2, label: t("stat_capital"), value: t("stat_capital_value"), color: "text-primary" },
+    { icon: Users, label: t("stat_team"), value: t("stat_team_value"), color: "text-secondary" },
+    { icon: MapPin, label: t("stat_location"), value: t("stat_location_value"), color: "text-success" },
+    { icon: TrendingUp, label: t("stat_growth"), value: t("stat_growth_value"), color: "text-warning" },
   ];
 
   const values = [
     {
       icon: Award,
-      title: "品質至上",
-      description: "專業、安全、穩定、有效",
+      title: t("value_1_title"),
+      description: t("value_1_desc"),
       color: "bg-primary/10 text-primary"
     },
     {
       icon: Handshake,
-      title: "忠誠信任",
-      description: "團隊合作、核心價值、彼此信賴",
+      title: t("value_2_title"),
+      description: t("value_2_desc"),
       color: "bg-secondary/10 text-secondary"
     },
     {
       icon: Zap,
-      title: "高效簡化",
-      description: "精實管理、扁平組織、資源優化",
+      title: t("value_3_title"),
+      description: t("value_3_desc"),
       color: "bg-success/10 text-success"
     },
     {
       icon: Users2,
-      title: "共享共榮",
-      description: "互利共贏、尊重包容、團隊共好",
+      title: t("value_4_title"),
+      description: t("value_4_desc"),
       color: "bg-warning/10 text-warning"
     },
     {
       icon: Eye,
-      title: "透明公開",
-      description: "資訊公開、信任溝通、公平機制",
+      title: t("value_5_title"),
+      description: t("value_5_desc"),
       color: "bg-destructive/10 text-destructive"
     }
   ];
@@ -61,13 +64,13 @@ const AboutSection = () => {
         <div className="text-center mb-16">
           <div className="inline-flex items-center space-x-2 bg-primary-light text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
             <Building2 className="w-4 h-4" />
-            <span>關於大凡健康</span>
+            <span>{t("about_badge")}</span>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            積極推動再生醫療發展的創新企業
+            {t("about_title")}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            以「生技創新 × 再生醫療 × 健康未來」為核心，致力於結合臨床需求與研發能量
+            {t("about_subtitle")}
           </p>
         </div>
 
@@ -94,11 +97,10 @@ const AboutSection = () => {
                 <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
                   <Target className="w-5 h-5 text-primary" />
                 </div>
-                <h3 className="text-2xl font-bold text-foreground">企業使命</h3>
+                <h3 className="text-2xl font-bold text-foreground">{t("mission_title")}</h3>
               </div>
               <p className="text-muted-foreground leading-relaxed">
-                提供專業的健康與醫療諮詢服務，持續深耕尖端生物科技研發，
-                為民眾帶來更優質、更精準的健康解決方案。
+                {t("mission_desc")}
               </p>
             </CardContent>
           </Card>
@@ -109,11 +111,10 @@ const AboutSection = () => {
                 <div className="w-10 h-10 bg-secondary/10 rounded-full flex items-center justify-center">
                   <Handshake className="w-5 h-5 text-secondary" />
                 </div>
-                <h3 className="text-2xl font-bold text-foreground">核心合作</h3>
+                <h3 className="text-2xl font-bold text-foreground">{t("partnership_title")}</h3>
               </div>
               <p className="text-muted-foreground leading-relaxed">
-                長期與國家級教學醫院及知名大學建立計畫性產學合作與專業交流，
-                掌握全球最新醫學資訊與技術趨勢，並將成果轉化為臨床可用的高端醫療產品。
+                {t("partnership_desc")}
               </p>
             </CardContent>
           </Card>
@@ -122,9 +123,9 @@ const AboutSection = () => {
         {/* Core Values */}
         <div className="bg-muted rounded-2xl p-8 md:p-12">
           <div className="text-center mb-12">
-            <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">經營理念</h3>
+            <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">{t("values_title")}</h3>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              我們堅持五大核心價值，打造卓越的生技醫療企業文化
+              {t("values_subtitle")}
             </p>
           </div>
 
@@ -146,10 +147,10 @@ const AboutSection = () => {
         {/* Company Info */}
         <div className="mt-16 text-center">
           <div className="inline-flex flex-wrap gap-3 justify-center">
-            <Badge variant="secondary" className="px-4 py-2">生化科技研發業</Badge>
-            <Badge variant="outline" className="px-4 py-2">再生醫療</Badge>
-            <Badge variant="outline" className="px-4 py-2">幹細胞研發</Badge>
-            <Badge variant="outline" className="px-4 py-2">外泌體技術</Badge>
+            <Badge variant="secondary" className="px-4 py-2">{t("contact_industry")}</Badge>
+            <Badge variant="outline" className="px-4 py-2">{t("footer_service_3")}</Badge>
+            <Badge variant="outline" className="px-4 py-2">{t("footer_service_1")}</Badge>
+            <Badge variant="outline" className="px-4 py-2">{t("product_2_title")}</Badge>
           </div>
         </div>
       </div>

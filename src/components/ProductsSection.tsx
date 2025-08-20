@@ -1,31 +1,34 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Dna, Zap, FlaskConical, ArrowUpRight } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 import cellResearchImage from "@/assets/cell-research.jpg";
 
 const ProductsSection = () => {
+  const { t } = useLanguage();
+  
   const products = [
     {
       icon: Dna,
-      title: "幹細胞新藥研發",
-      description: "專注於幹細胞治療技術研發，針對多種疾病開發創新治療方案",
+      title: t("product_1_title"),
+      description: t("product_1_desc"),
       features: [
-        "間充質幹細胞技術",
-        "多潛能幹細胞應用",
-        "自體幹細胞治療",
-        "臨床試驗管理"
+        t("product_1_feature_1"),
+        t("product_1_feature_2"),
+        t("product_1_feature_3"),
+        t("product_1_feature_4")
       ],
       gradient: "bg-gradient-primary"
     },
     {
       icon: Zap,
-      title: "外泌體新藥研發",
-      description: "開發外泌體載體技術，提供精準的細胞間通訊治療解決方案",
+      title: t("product_2_title"),
+      description: t("product_2_desc"),
       features: [
-        "外泌體純化技術",
-        "載體工程設計",
-        "靶向治療研發",
-        "藥物遞送系統"
+        t("product_2_feature_1"),
+        t("product_2_feature_2"),
+        t("product_2_feature_3"),
+        t("product_2_feature_4")
       ],
       gradient: "bg-gradient-secondary"
     }
@@ -38,13 +41,13 @@ const ProductsSection = () => {
         <div className="text-center mb-16">
           <div className="inline-flex items-center space-x-2 bg-primary-light text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
             <FlaskConical className="w-4 h-4" />
-            <span>核心產品服務</span>
+            <span>{t("products_badge")}</span>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            專業的再生醫療研發服務
+            {t("products_title")}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            結合臨床需求與研發能量，打造安全、有效且高品質的醫療產品與服務
+            {t("products_subtitle")}
           </p>
         </div>
 
@@ -70,7 +73,7 @@ const ProductsSection = () => {
                   </div>
                   
                   <Button variant="outline" className="group">
-                    了解更多
+                    {t("learn_more")}
                     <ArrowUpRight className="ml-2 w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                   </Button>
                 </div>
@@ -84,7 +87,7 @@ const ProductsSection = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
-                尖端科技研發實力
+                {t("research_title")}
               </h3>
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
@@ -92,8 +95,8 @@ const ProductsSection = () => {
                     <div className="w-3 h-3 bg-primary rounded-full"></div>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-foreground mb-2">國際級研發標準</h4>
-                    <p className="text-muted-foreground">遵循GMP標準，確保產品品質與安全性</p>
+                    <h4 className="font-semibold text-foreground mb-2">{t("research_1_title")}</h4>
+                    <p className="text-muted-foreground">{t("research_1_desc")}</p>
                   </div>
                 </div>
                 
@@ -102,8 +105,8 @@ const ProductsSection = () => {
                     <div className="w-3 h-3 bg-secondary rounded-full"></div>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-foreground mb-2">產學合作網絡</h4>
-                    <p className="text-muted-foreground">與頂尖大學和醫院建立長期合作關係</p>
+                    <h4 className="font-semibold text-foreground mb-2">{t("research_2_title")}</h4>
+                    <p className="text-muted-foreground">{t("research_2_desc")}</p>
                   </div>
                 </div>
                 
@@ -112,8 +115,8 @@ const ProductsSection = () => {
                     <div className="w-3 h-3 bg-success rounded-full"></div>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-foreground mb-2">臨床轉化應用</h4>
-                    <p className="text-muted-foreground">將研發成果轉化為實際臨床應用</p>
+                    <h4 className="font-semibold text-foreground mb-2">{t("research_3_title")}</h4>
+                    <p className="text-muted-foreground">{t("research_3_desc")}</p>
                   </div>
                 </div>
               </div>
