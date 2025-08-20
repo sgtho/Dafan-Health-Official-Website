@@ -1,24 +1,19 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Microscope, Shield, Award } from "lucide-react";
 import heroImage from "@/assets/pharma-lab.jpg";
-
 const HeroSection = () => {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      element.scrollIntoView({
+        behavior: "smooth"
+      });
     }
   };
-  
-  return (
-    <section id="home" className="relative min-h-screen flex items-center bg-gradient-subtle overflow-hidden">
+  return <section id="home" className="relative min-h-screen flex items-center bg-gradient-subtle overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <img 
-          src={heroImage} 
-          alt="Dafen Health Pharmaceutical Laboratory" 
-          className="w-full h-full object-cover opacity-30"
-        />
+        <img src={heroImage} alt="Dafen Health Pharmaceutical Laboratory" className="w-full h-full object-cover opacity-30" />
         <div className="absolute inset-0 bg-gradient-hero opacity-70"></div>
       </div>
 
@@ -32,7 +27,7 @@ const HeroSection = () => {
           </div>
 
           {/* Main Heading */}
-          <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 animate-fade-in">
+          <h1 className="md:text-6xl font-bold text-foreground mb-6 animate-fade-in py-[20px] text-5xl">
             Advancing
             <span className="text-primary"> Stem Cell </span>
             &
@@ -42,7 +37,7 @@ const HeroSection = () => {
           </h1>
 
           {/* Subtitle */}
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed animate-slide-in-right">
+          <p className="md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed animate-slide-in-right text-slate-50 text-sm">
             Dafen Health is an innovative biotechnology company focused on cutting-edge regenerative medicine research and development, creating safe, effective, and high-quality therapeutic solutions.
           </p>
 
@@ -92,8 +87,6 @@ const HeroSection = () => {
           <div className="w-1 h-3 bg-primary rounded-full mt-2"></div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
