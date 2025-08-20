@@ -1,8 +1,11 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
+import { useLanguage } from "@/contexts/LanguageContext";
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { t } = useLanguage();
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -24,25 +27,26 @@ const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <button onClick={() => scrollToSection("home")} className="text-muted-foreground hover:text-primary transition-colors">
-              Home
+              {t("nav.home")}
             </button>
             <button onClick={() => scrollToSection("about")} className="text-muted-foreground hover:text-primary transition-colors">
-              About
+              {t("nav.about")}
             </button>
             <button onClick={() => scrollToSection("technology")} className="text-muted-foreground hover:text-primary transition-colors">
-              Technology
+              {t("nav.technology")}
             </button>
             <button onClick={() => scrollToSection("partnerships")} className="text-muted-foreground hover:text-primary transition-colors">
-              Partnerships
+              {t("nav.partnerships")}
             </button>
             <button onClick={() => scrollToSection("news")} className="text-muted-foreground hover:text-primary transition-colors">
-              News
+              {t("nav.news")}
             </button>
             <button onClick={() => scrollToSection("contact")} className="text-muted-foreground hover:text-primary transition-colors">
-              Contact
+              {t("nav.contact")}
             </button>
+            <LanguageSwitcher />
             <Button onClick={() => scrollToSection("contact")} size="sm">
-              Get in Touch
+              {t("nav.getInTouch")}
             </Button>
           </div>
 
@@ -58,26 +62,27 @@ const Navigation = () => {
         {isOpen && <div className="md:hidden bg-background border-t border-border">
             <div className="px-2 pt-2 pb-3 space-y-1">
               <button onClick={() => scrollToSection("home")} className="block px-3 py-2 text-muted-foreground hover:text-primary transition-colors w-full text-left">
-                Home
+                {t("nav.home")}
               </button>
               <button onClick={() => scrollToSection("about")} className="block px-3 py-2 text-muted-foreground hover:text-primary transition-colors w-full text-left">
-                About
+                {t("nav.about")}
               </button>
               <button onClick={() => scrollToSection("technology")} className="block px-3 py-2 text-muted-foreground hover:text-primary transition-colors w-full text-left">
-                Technology
+                {t("nav.technology")}
               </button>
               <button onClick={() => scrollToSection("partnerships")} className="block px-3 py-2 text-muted-foreground hover:text-primary transition-colors w-full text-left">
-                Partnerships
+                {t("nav.partnerships")}
               </button>
               <button onClick={() => scrollToSection("news")} className="block px-3 py-2 text-muted-foreground hover:text-primary transition-colors w-full text-left">
-                News
+                {t("nav.news")}
               </button>
               <button onClick={() => scrollToSection("contact")} className="block px-3 py-2 text-muted-foreground hover:text-primary transition-colors w-full text-left">
-                Contact
+                {t("nav.contact")}
               </button>
-              <div className="px-3 py-2">
+              <div className="px-3 py-2 flex flex-col space-y-2">
+                <LanguageSwitcher />
                 <Button onClick={() => scrollToSection("contact")} size="sm" className="w-full">
-                  Get in Touch
+                  {t("nav.getInTouch")}
                 </Button>
               </div>
             </div>
