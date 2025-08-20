@@ -10,7 +10,7 @@ const HeroSection = () => {
       });
     }
   };
-  return <section id="home" className="relative min-h-screen flex items-center bg-slate-900 overflow-hidden">
+  return <section id="home" className="relative min-h-screen flex items-center bg-slate-900 overflow-hidden pt-20">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img src={heroImage} alt="Stem Cell and Exosome Research Background" className="w-full h-full object-cover opacity-60" />
