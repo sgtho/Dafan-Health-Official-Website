@@ -1,13 +1,11 @@
 import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";  
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { MapPin, Phone, Mail, Building2, Users, CheckCircle } from "lucide-react";
-
 const ContactSection = () => {
-  return (
-    <section id="contact" className="py-20 bg-muted/30">
+  return <section id="contact" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
@@ -48,20 +46,7 @@ const ContactSection = () => {
               </Card>
 
               <Card className="border-0 shadow-card-soft">
-                <CardContent className="p-6">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                      <Users className="w-6 h-6 text-secondary" />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold mb-2">Contact Person</h4>
-                      <p className="text-muted-foreground">
-                        Ms. Chung<br />
-                        Professional Consulting Services
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
+                
               </Card>
 
               <Card className="border-0 shadow-card-soft">
@@ -89,17 +74,10 @@ const ContactSection = () => {
               </CardHeader>
               <CardContent>
                 <div className="space-y-3">
-                  {[
-                    "Professional regenerative medicine R&D team",
-                    "Industry-academia collaboration with national hospitals", 
-                    "International standard quality management",
-                    "Innovative stem cell and exosome technology"
-                  ].map((item, index) => (
-                    <div key={index} className="flex items-center space-x-3">
+                  {["Professional regenerative medicine R&D team", "Industry-academia collaboration with national hospitals", "International standard quality management", "Innovative stem cell and exosome technology"].map((item, index) => <div key={index} className="flex items-center space-x-3">
                       <CheckCircle className="w-5 h-5 text-success flex-shrink-0" />
                       <span className="text-muted-foreground">{item}</span>
-                    </div>
-                  ))}
+                    </div>)}
                 </div>
               </CardContent>
             </Card>
@@ -145,10 +123,7 @@ const ContactSection = () => {
 
                   <div className="space-y-2">
                     <label className="text-sm font-medium">Message *</label>  
-                    <Textarea 
-                      placeholder="Please describe your needs, interests, or questions in detail..."
-                      className="min-h-[120px]"
-                    />
+                    <Textarea placeholder="Please describe your needs, interests, or questions in detail..." className="min-h-[120px]" />
                   </div>
 
                   <div className="text-sm text-muted-foreground bg-muted/50 p-4 rounded-lg">
@@ -165,8 +140,6 @@ const ContactSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ContactSection;

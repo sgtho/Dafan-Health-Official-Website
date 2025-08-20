@@ -1,10 +1,8 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Building2, Users, MapPin, TrendingUp, Target, Handshake } from "lucide-react";
-
 const AboutSection = () => {
-  return (
-    <section id="about" className="py-20 bg-muted/30">
+  return <section id="about" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
@@ -21,39 +19,7 @@ const AboutSection = () => {
         </div>
 
         {/* Stats */}
-        <div className="grid md:grid-cols-4 gap-8 mb-16">
-          <div className="text-center">
-            <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Building2 className="w-6 h-6 text-primary" />
-            </div>
-            <div className="text-3xl font-bold text-foreground mb-2">NT$196.6M</div>
-            <div className="text-muted-foreground">Capital Investment</div>
-          </div>
-          
-          <div className="text-center">
-            <div className="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Users className="w-6 h-6 text-secondary" />
-            </div>
-            <div className="text-3xl font-bold text-foreground mb-2">15+</div>
-            <div className="text-muted-foreground">Expert Team Members</div>
-          </div>
-          
-          <div className="text-center">
-            <div className="w-12 h-12 bg-success/10 rounded-full flex items-center justify-center mx-auto mb-4">
-              <MapPin className="w-6 h-6 text-success" />
-            </div>
-            <div className="text-3xl font-bold text-foreground mb-2">Taichung</div>
-            <div className="text-muted-foreground">Industrial Park Base</div>
-          </div>
-          
-          <div className="text-center">
-            <div className="w-12 h-12 bg-warning/10 rounded-full flex items-center justify-center mx-auto mb-4">
-              <TrendingUp className="w-6 h-6 text-warning" />
-            </div>
-            <div className="text-3xl font-bold text-foreground mb-2">35+</div>
-            <div className="text-muted-foreground">Years of Research</div>
-          </div>
-        </div>
+        
 
         {/* Mission & Vision */}
         <div className="grid md:grid-cols-2 gap-8 mb-16">
@@ -97,29 +63,22 @@ const AboutSection = () => {
         </div>
 
         <div className="grid md:grid-cols-5 gap-6">
-          {[
-            {
-              title: "Quality First",
-              description: "Professional, Safe, Stable, and Effective"
-            },
-            {
-              title: "Loyalty & Trust",
-              description: "Teamwork, Core Values, Mutual Trust"
-            },
-            {
-              title: "Efficiency",
-              description: "Lean Management, Flat Organization, Resource Optimization"
-            },
-            {
-              title: "Shared Growth",
-              description: "Mutual Benefit, Respect & Inclusion, Team Success"
-            },
-            {
-              title: "Transparency",
-              description: "Information Transparency, Trustful Communication, Fair Mechanisms"
-            }
-          ].map((value, index) => (
-            <Card key={index} className="text-center border-0 shadow-card-soft hover:shadow-medical transition-shadow">
+          {[{
+          title: "Quality First",
+          description: "Professional, Safe, Stable, and Effective"
+        }, {
+          title: "Loyalty & Trust",
+          description: "Teamwork, Core Values, Mutual Trust"
+        }, {
+          title: "Efficiency",
+          description: "Lean Management, Flat Organization, Resource Optimization"
+        }, {
+          title: "Shared Growth",
+          description: "Mutual Benefit, Respect & Inclusion, Team Success"
+        }, {
+          title: "Transparency",
+          description: "Information Transparency, Trustful Communication, Fair Mechanisms"
+        }].map((value, index) => <Card key={index} className="text-center border-0 shadow-card-soft hover:shadow-medical transition-shadow">
               <CardContent className="p-6">
                 <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4 text-primary-foreground font-bold">
                   {index + 1}
@@ -127,12 +86,9 @@ const AboutSection = () => {
                 <h4 className="font-semibold mb-2">{value.title}</h4>
                 <p className="text-sm text-muted-foreground">{value.description}</p>
               </CardContent>
-            </Card>
-          ))}
+            </Card>)}
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default AboutSection;
