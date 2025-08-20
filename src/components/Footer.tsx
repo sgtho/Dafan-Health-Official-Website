@@ -1,25 +1,20 @@
 import { Building2, Mail, MapPin, Phone } from "lucide-react";
-
 const Footer = () => {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      element.scrollIntoView({
+        behavior: "smooth"
+      });
     }
   };
-
-  return (
-    <footer className="bg-foreground text-background py-16">
+  return <footer className="bg-foreground text-background py-16">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="md:col-span-2">
             <div className="flex items-center space-x-3 mb-4">
-              <img 
-                src="/lovable-uploads/1b256dc6-c344-447f-8cfa-36a68d71a3bd.png" 
-                alt="Dafen Health Logo" 
-                className="w-10 h-10 brightness-0 invert"
-              />
+              
               <span className="text-xl font-bold">Dafen Health Co., Ltd.</span>
             </div>
             <p className="text-muted mb-6 leading-relaxed">
@@ -33,14 +28,8 @@ const Footer = () => {
                 <Building2 className="w-4 h-4" />
                 <span>Industry: Biochemical Technology R&D</span>
               </div>
-              <div className="flex items-center space-x-2">
-                <span className="w-4 h-4 text-center">💰</span>
-                <span>Capital: NT$196.6 Million</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <span className="w-4 h-4 text-center">👥</span>
-                <span>Employees: 15 People</span>
-              </div>
+              
+              
             </div>
           </div>
 
@@ -48,40 +37,22 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <div className="space-y-2">
-              <button
-                onClick={() => scrollToSection("home")}
-                className="block text-muted hover:text-background transition-colors"
-              >
+              <button onClick={() => scrollToSection("home")} className="block text-muted hover:text-background transition-colors">
                 Home
               </button>
-              <button
-                onClick={() => scrollToSection("about")}
-                className="block text-muted hover:text-background transition-colors"
-              >
+              <button onClick={() => scrollToSection("about")} className="block text-muted hover:text-background transition-colors">
                 About Us
               </button>
-              <button
-                onClick={() => scrollToSection("technology")}
-                className="block text-muted hover:text-background transition-colors"
-              >
+              <button onClick={() => scrollToSection("technology")} className="block text-muted hover:text-background transition-colors">
                 Technology
               </button>
-              <button
-                onClick={() => scrollToSection("partnerships")}
-                className="block text-muted hover:text-background transition-colors"
-              >
+              <button onClick={() => scrollToSection("partnerships")} className="block text-muted hover:text-background transition-colors">
                 Partnerships
               </button>
-              <button
-                onClick={() => scrollToSection("news")}
-                className="block text-muted hover:text-background transition-colors"
-              >
+              <button onClick={() => scrollToSection("news")} className="block text-muted hover:text-background transition-colors">
                 News
               </button>
-              <button
-                onClick={() => scrollToSection("contact")}
-                className="block text-muted hover:text-background transition-colors"
-              >
+              <button onClick={() => scrollToSection("contact")} className="block text-muted hover:text-background transition-colors">
                 Contact
               </button>
             </div>
@@ -101,8 +72,8 @@ const Footer = () => {
             <div className="mt-6">
               <div className="text-sm text-muted">
                 <div className="flex items-center space-x-2 mb-2">
-                  <Mail className="w-4 h-4" />
-                  <span>Contact: Ms. Chung</span>
+                  
+                  
                 </div>
                 <div className="flex items-start space-x-2">
                   <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
@@ -124,8 +95,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
