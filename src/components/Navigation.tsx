@@ -18,7 +18,7 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex items-center space-x-3">
             <img src="/lovable-uploads/732bdfe2-ef82-4065-a908-3222b6f1142f.png" alt="Dafen Health Logo" className="h-8 w-auto" />
-            <span className="text-xl font-bold text-foreground">Dafen Health</span>
+            <span className="text-xl font-bold text-indigo-900">Dafen Health</span>
           </div>
 
           {/* Desktop Navigation */}
