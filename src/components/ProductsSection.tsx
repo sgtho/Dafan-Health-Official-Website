@@ -3,13 +3,9 @@ import { Button } from "@/components/ui/button";
 import { Dna, Zap, FlaskConical, ArrowUpRight } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import cellResearchImage from "@/assets/cell-research.jpg";
-import { useScrollAnimation, useStaggeredAnimation } from "@/hooks/useScrollAnimation";
 
 const ProductsSection = () => {
   const { t } = useLanguage();
-  const { ref: headerRef, isVisible: headerVisible } = useScrollAnimation();
-  const { containerRef: productsRef, visibleItems: productVisibility } = useStaggeredAnimation(2, 300);
-  const { ref: researchRef, isVisible: researchVisible } = useScrollAnimation();
   
   const products = [
     {
@@ -42,7 +38,7 @@ const ProductsSection = () => {
     <section id="products" className="py-20 bg-muted">
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div ref={headerRef} className={`text-center mb-16 transition-all duration-1000 ${headerVisible ? 'animate-fade-in-up' : 'opacity-0'}`}>
+        <div className="text-center mb-16">
           <div className="inline-flex items-center space-x-2 bg-primary-light text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
             <FlaskConical className="w-4 h-4" />
             <span>{t("products_badge")}</span>
@@ -56,13 +52,12 @@ const ProductsSection = () => {
         </div>
 
         {/* Products Grid */}
-        <div ref={productsRef} className="grid lg:grid-cols-2 gap-8 mb-16">
+        <div className="grid lg:grid-cols-2 gap-8 mb-16">
           {products.map((product, index) => (
-            <Card key={index} className={`overflow-hidden shadow-card-soft hover:shadow-glow transition-all duration-500 border-0 hover:scale-105 ${productVisibility[index] ? 'animate-fade-in-up' : 'opacity-0 translate-y-[30px]'}`}>
+            <Card key={index} className="overflow-hidden shadow-card-soft hover:shadow-glow transition-all duration-300 border-0">
               <CardContent className="p-0">
-                <div className={`h-32 ${product.gradient} flex items-center justify-center relative overflow-hidden`}>
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full animate-shimmer" />
-                  <product.icon className="w-16 h-16 text-white animate-float-slow" />
+                <div className={`h-32 ${product.gradient} flex items-center justify-center`}>
+                  <product.icon className="w-16 h-16 text-white" />
                 </div>
                 <div className="p-8">
                   <h3 className="text-2xl font-bold text-foreground mb-4">{product.title}</h3>
@@ -88,7 +83,7 @@ const ProductsSection = () => {
         </div>
 
         {/* Research Showcase */}
-        <div ref={researchRef} className={`bg-card rounded-2xl p-8 md:p-12 shadow-card-soft hover:shadow-glow transition-all duration-500 ${researchVisible ? 'animate-fade-in-up' : 'opacity-0'}`}>
+        <div className="bg-card rounded-2xl p-8 md:p-12 shadow-card-soft">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
@@ -127,14 +122,13 @@ const ProductsSection = () => {
               </div>
             </div>
             
-            <div className={`relative transition-all duration-1000 ${researchVisible ? 'animate-fade-in-right' : 'opacity-0 translate-x-[30px]'}`}>
+            <div className="relative">
               <img 
                 src={cellResearchImage} 
                 alt="細胞研發" 
-                className="w-full h-80 object-cover rounded-xl shadow-medical hover:shadow-glow hover:scale-105 transition-all duration-300"
+                className="w-full h-80 object-cover rounded-xl shadow-medical"
               />
               <div className="absolute inset-0 bg-gradient-primary opacity-20 rounded-xl"></div>
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full animate-shimmer opacity-0 hover:opacity-100 transition-opacity duration-300" />
             </div>
           </div>
         </div>

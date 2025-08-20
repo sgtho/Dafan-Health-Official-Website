@@ -3,19 +3,13 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Microscope, Dna, FlaskConical, Shield, CheckCircle, ArrowRight } from "lucide-react";
 import technologyImage from "@/assets/technology-lab.jpg";
-import { useScrollAnimation, useStaggeredAnimation } from "@/hooks/useScrollAnimation";
 
 const TechnologySection = () => {
-  const { ref: headerRef, isVisible: headerVisible } = useScrollAnimation();
-  const { ref: featuresRef, isVisible: featuresVisible } = useScrollAnimation();
-  const { containerRef: cardsRef, visibleItems: cardVisibility } = useStaggeredAnimation(2, 200);
-  const { containerRef: capabilitiesRef, visibleItems: capabilityVisibility } = useStaggeredAnimation(3, 150);
-
   return (
     <section id="technology" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <div ref={headerRef} className={`text-center mb-16 transition-all duration-1000 ${headerVisible ? 'animate-fade-in-up' : 'opacity-0'}`}>
+        <div className="text-center mb-16">
           <Badge variant="outline" className="mb-4 text-primary border-primary">
             Advanced Technology
           </Badge>
@@ -29,15 +23,15 @@ const TechnologySection = () => {
         </div>
 
         {/* Technology Overview */}
-        <div ref={featuresRef} className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-          <div className={`transition-all duration-1000 ${featuresVisible ? 'animate-fade-in-left' : 'opacity-0 translate-x-[-30px]'}`}>
+        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+          <div>
             <img 
               src={technologyImage} 
               alt="Advanced Biotechnology Laboratory" 
-              className="w-full h-96 object-cover rounded-lg shadow-card-soft hover:shadow-glow transition-all duration-300 hover:scale-105"
+              className="w-full h-96 object-cover rounded-lg shadow-card-soft"
             />
           </div>
-          <div className={`transition-all duration-1000 ${featuresVisible ? 'animate-fade-in-right' : 'opacity-0 translate-x-[30px]'}`}>
+          <div>
             <h3 className="text-2xl md:text-3xl font-bold mb-6">
               International Standards, Local Innovation
             </h3>
@@ -62,11 +56,11 @@ const TechnologySection = () => {
         </div>
 
         {/* Core Technologies */}
-        <div ref={cardsRef} className="grid md:grid-cols-2 gap-8 mb-16">
-          <Card className={`border-0 shadow-card-soft hover:shadow-medical transition-all duration-500 hover:scale-105 ${cardVisibility[0] ? 'animate-fade-in-up' : 'opacity-0 translate-y-[30px]'}`}>
+        <div className="grid md:grid-cols-2 gap-8 mb-16">
+          <Card className="border-0 shadow-card-soft hover:shadow-medical transition-shadow">
             <CardHeader>
-              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4 hover:animate-pulse-slow">
-                <Dna className="w-6 h-6 text-primary animate-rotate-slow" />
+              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                <Dna className="w-6 h-6 text-primary" />
               </div>
               <CardTitle className="text-xl">Stem Cell Drug Development</CardTitle>
             </CardHeader>
@@ -96,10 +90,10 @@ const TechnologySection = () => {
             </CardContent>
           </Card>
 
-          <Card className={`border-0 shadow-card-soft hover:shadow-medical transition-all duration-500 hover:scale-105 ${cardVisibility[1] ? 'animate-fade-in-up' : 'opacity-0 translate-y-[30px]'}`} style={{ animationDelay: '0.2s' }}>
+          <Card className="border-0 shadow-card-soft hover:shadow-medical transition-shadow">
             <CardHeader>
-              <div className="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center mb-4 hover:animate-pulse-slow">
-                <Microscope className="w-6 h-6 text-secondary animate-float" />
+              <div className="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center mb-4">
+                <Microscope className="w-6 h-6 text-secondary" />
               </div>
               <CardTitle className="text-xl">Exosome Drug Development</CardTitle>
             </CardHeader>
@@ -137,11 +131,11 @@ const TechnologySection = () => {
           </h3>
         </div>
 
-        <div ref={capabilitiesRef} className="grid md:grid-cols-3 gap-8">
-          <Card className={`text-center border-0 shadow-card-soft hover:shadow-glow transition-all duration-500 hover:scale-105 ${capabilityVisibility[0] ? 'animate-scale-in-bounce' : 'opacity-0 scale-95'}`}>
+        <div className="grid md:grid-cols-3 gap-8">
+          <Card className="text-center border-0 shadow-card-soft">
             <CardContent className="p-8">
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 hover:animate-glow">
-                <Shield className="w-8 h-8 text-primary animate-float-slow" />
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Shield className="w-8 h-8 text-primary" />
               </div>
               <h4 className="text-xl font-semibold mb-4">International Standards</h4>
               <p className="text-muted-foreground">
@@ -151,10 +145,10 @@ const TechnologySection = () => {
             </CardContent>
           </Card>
 
-          <Card className={`text-center border-0 shadow-card-soft hover:shadow-glow transition-all duration-500 hover:scale-105 ${capabilityVisibility[1] ? 'animate-scale-in-bounce' : 'opacity-0 scale-95'}`} style={{ animationDelay: '0.15s' }}>
+          <Card className="text-center border-0 shadow-card-soft">
             <CardContent className="p-8">
-              <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4 hover:animate-glow">
-                <FlaskConical className="w-8 h-8 text-secondary animate-float" style={{ animationDelay: '0.5s' }} />
+              <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <FlaskConical className="w-8 h-8 text-secondary" />
               </div>
               <h4 className="text-xl font-semibold mb-4">Clinical Translation</h4>
               <p className="text-muted-foreground">
@@ -164,10 +158,10 @@ const TechnologySection = () => {
             </CardContent>
           </Card>
 
-          <Card className={`text-center border-0 shadow-card-soft hover:shadow-glow transition-all duration-500 hover:scale-105 ${capabilityVisibility[2] ? 'animate-scale-in-bounce' : 'opacity-0 scale-95'}`} style={{ animationDelay: '0.3s' }}>
+          <Card className="text-center border-0 shadow-card-soft">
             <CardContent className="p-8">
-              <div className="w-16 h-16 bg-success/10 rounded-full flex items-center justify-center mx-auto mb-4 hover:animate-glow">
-                <Microscope className="w-8 h-8 text-success animate-float-slow" style={{ animationDelay: '1s' }} />
+              <div className="w-16 h-16 bg-success/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Microscope className="w-8 h-8 text-success" />
               </div>
               <h4 className="text-xl font-semibold mb-4">Advanced Equipment</h4>
               <p className="text-muted-foreground">

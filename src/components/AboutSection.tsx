@@ -1,15 +1,11 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Building2, Users, MapPin, TrendingUp, Target, Handshake } from "lucide-react";
-import { useScrollAnimation, useStaggeredAnimation } from "@/hooks/useScrollAnimation";
 const AboutSection = () => {
-  const { ref: headerRef, isVisible: headerVisible } = useScrollAnimation();
-  const { containerRef: cardsRef, visibleItems: cardVisibility } = useStaggeredAnimation(2, 200);
-
   return <section id="about" className="bg-muted/30 py-0">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <div ref={headerRef} className={`text-center mb-16 transition-all duration-1000 ${headerVisible ? 'animate-fade-in-up' : 'opacity-0'}`}>
+        <div className="text-center mb-16">
           <Badge variant="outline" className="mb-4 text-primary border-primary py-0 my-[20px]">
             About Dafen Health
           </Badge>
@@ -26,11 +22,11 @@ const AboutSection = () => {
         
 
         {/* Mission & Vision */}
-        <div ref={cardsRef} className="grid md:grid-cols-2 gap-8 mb-16">
-          <Card className={`border-0 shadow-card-soft hover:shadow-glow transition-all duration-500 hover:scale-105 ${cardVisibility[0] ? 'animate-fade-in-left' : 'opacity-0 translate-x-[-30px]'}`}>
+        <div className="grid md:grid-cols-2 gap-8 mb-16">
+          <Card className="border-0 shadow-card-soft">
             <CardContent className="p-8">
-              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4 hover:animate-pulse-slow">
-                <Target className="w-6 h-6 text-primary animate-float" />
+              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                <Target className="w-6 h-6 text-primary" />
               </div>
               <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
               <p className="text-muted-foreground leading-relaxed">
@@ -41,10 +37,10 @@ const AboutSection = () => {
             </CardContent>
           </Card>
           
-          <Card className={`border-0 shadow-card-soft hover:shadow-glow transition-all duration-500 hover:scale-105 ${cardVisibility[1] ? 'animate-fade-in-right' : 'opacity-0 translate-x-[30px]'}`}>
+          <Card className="border-0 shadow-card-soft">
             <CardContent className="p-8">
-              <div className="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center mb-4 hover:animate-pulse-slow">
-                <Handshake className="w-6 h-6 text-secondary animate-float-slow" style={{ animationDelay: '0.5s' }} />
+              <div className="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center mb-4">
+                <Handshake className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="text-2xl font-bold mb-4">Strategic Partnerships</h3>
               <p className="text-muted-foreground leading-relaxed">
