@@ -18,10 +18,12 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-primary rounded-full flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-sm">D</span>
-            </div>
+          <div className="flex items-center space-x-3">
+            <img 
+              src="/lovable-uploads/1b256dc6-c344-447f-8cfa-36a68d71a3bd.png" 
+              alt="Dafen Health Logo" 
+              className="w-10 h-10"
+            />
             <span className="text-xl font-bold text-foreground">Dafen Health</span>
           </div>
 

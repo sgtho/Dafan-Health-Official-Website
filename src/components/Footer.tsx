@@ -14,10 +14,12 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="md:col-span-2">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-primary rounded-full flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-sm">D</span>
-              </div>
+            <div className="flex items-center space-x-3 mb-4">
+              <img 
+                src="/lovable-uploads/1b256dc6-c344-447f-8cfa-36a68d71a3bd.png" 
+                alt="Dafen Health Logo" 
+                className="w-10 h-10 brightness-0 invert"
+              />
               <span className="text-xl font-bold">Dafen Health Co., Ltd.</span>
             </div>
             <p className="text-muted mb-6 leading-relaxed">

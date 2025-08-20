@@ -18,11 +18,11 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 210 30% 8%;
 
-    /* Medical Blue Primary */
-    --primary: 210 100% 50%;
+    /* Dafen Blue Primary - Matching Logo */
+    --primary: 237 73% 50%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 210 100% 95%;
-    --primary-dark: 210 100% 35%;
+    --primary-light: 237 73% 95%;
+    --primary-dark: 237 73% 35%;
 
     /* Scientific Green Secondary */
     --secondary: 142 76% 36%;
@@ -48,18 +48,18 @@ All colors MUST be HSL.
 
     --border: 210 20% 92%;
     --input: 210 20% 92%;
-    --ring: 210 100% 50%;
+    --ring: 237 73% 50%;
 
     /* Custom Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(210 100% 50%), hsl(210 100% 35%));
+    --gradient-primary: linear-gradient(135deg, hsl(237 73% 50%), hsl(237 73% 35%));
     --gradient-secondary: linear-gradient(135deg, hsl(142 76% 36%), hsl(142 76% 28%));
-    --gradient-hero: linear-gradient(135deg, hsl(210 100% 50%), hsl(142 76% 36%));
+    --gradient-hero: linear-gradient(135deg, hsl(237 73% 50%), hsl(142 76% 36%));
     --gradient-subtle: linear-gradient(180deg, hsl(210 20% 98%), hsl(0 0% 100%));
 
     /* Shadows */
-    --shadow-medical: 0 10px 30px -10px hsl(210 100% 50% / 0.2);
+    --shadow-medical: 0 10px 30px -10px hsl(237 73% 50% / 0.2);
     --shadow-card: 0 4px 20px -4px hsl(210 20% 20% / 0.1);
-    --shadow-glow: 0 0 40px hsl(210 100% 50% / 0.3);
+    --shadow-glow: 0 0 40px hsl(237 73% 50% / 0.3);
 
     --radius: 0.5rem;
 
@@ -91,10 +91,10 @@ All colors MUST be HSL.
     --popover: 210 25% 12%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 210 100% 60%;
+    --primary: 237 73% 60%;
     --primary-foreground: 210 30% 8%;
-    --primary-light: 210 100% 20%;
-    --primary-dark: 210 100% 45%;
+    --primary-light: 237 73% 20%;
+    --primary-dark: 237 73% 45%;
 
     --secondary: 142 60% 45%;
     --secondary-foreground: 210 30% 8%;
@@ -117,16 +117,16 @@ All colors MUST be HSL.
 
     --border: 210 20% 20%;
     --input: 210 20% 20%;
-    --ring: 210 100% 60%;
+    --ring: 237 73% 60%;
 
-    --gradient-primary: linear-gradient(135deg, hsl(210 100% 60%), hsl(210 100% 45%));
+    --gradient-primary: linear-gradient(135deg, hsl(237 73% 60%), hsl(237 73% 45%));
     --gradient-secondary: linear-gradient(135deg, hsl(142 60% 45%), hsl(142 60% 35%));
-    --gradient-hero: linear-gradient(135deg, hsl(210 100% 60%), hsl(142 60% 45%));
+    --gradient-hero: linear-gradient(135deg, hsl(237 73% 60%), hsl(142 60% 45%));
     --gradient-subtle: linear-gradient(180deg, hsl(210 25% 15%), hsl(210 30% 8%));
 
-    --shadow-medical: 0 10px 30px -10px hsl(210 100% 60% / 0.3);
+    --shadow-medical: 0 10px 30px -10px hsl(237 73% 60% / 0.3);
     --shadow-card: 0 4px 20px -4px hsl(0 0% 0% / 0.3);
-    --shadow-glow: 0 0 40px hsl(210 100% 60% / 0.4);
+    --shadow-glow: 0 0 40px hsl(237 73% 60% / 0.4);
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
