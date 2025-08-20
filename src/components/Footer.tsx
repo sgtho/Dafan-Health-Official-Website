@@ -55,6 +55,9 @@ const Footer = () => {
               <button onClick={() => scrollToSection("contact")} className="block text-muted hover:text-background transition-colors">
                 Contact
               </button>
+              <a href="https://www.104.com.tw/company/1a2x6blnzk" target="_blank" rel="noopener noreferrer" className="block text-muted hover:text-background transition-colors">
+                Career
+              </a>
             </div>
           </div>
 
