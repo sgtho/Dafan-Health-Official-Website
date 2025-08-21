@@ -4,7 +4,10 @@ import { Button } from "@/components/ui/button";
 import { Microscope, Dna, FlaskConical, Shield, CheckCircle, ArrowRight } from "lucide-react";
 import technologyImage from "@/assets/technology-lab.jpg";
 const TechnologySection = () => {
-  return <section id="technology" className="pt-16 md:pt-20 pb-8 md:pb-12 bg-background">
+  return <section id="technology" className="pt-16 md:pt-20 pb-8 md:pb-12 bg-gradient-to-b from-muted/40 to-background relative">
+      {/* Section transition effect */}
+      <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-muted/40 to-transparent pointer-events-none"></div>
+      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-px bg-gradient-to-r from-transparent via-secondary/50 to-transparent"></div>
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">

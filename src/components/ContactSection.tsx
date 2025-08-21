@@ -5,7 +5,12 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { MapPin, Phone, Mail, Building2, Users, CheckCircle } from "lucide-react";
 const ContactSection = () => {
-  return <section id="contact" className="py-16 md:py-20 bg-muted/30">
+  return <section id="contact" className="py-16 md:py-20 bg-gradient-to-b from-white via-muted/20 to-muted/40 relative">
+      {/* Final section separator */}
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent"></div>
+      <div className="absolute top-4 left-1/2 transform -translate-x-1/2">
+        <div className="w-8 h-px bg-gradient-to-r from-primary/30 via-secondary/50 to-success/30"></div>
+      </div>
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">

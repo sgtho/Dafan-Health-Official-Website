@@ -4,7 +4,12 @@ import { Building2, GraduationCap, Hospital, Globe, Users, Award } from "lucide-
 
 const PartnershipsSection = () => {
   return (
-    <section id="partnerships" className="py-16 md:py-20 bg-muted/30">
+    <section id="partnerships" className="py-16 md:py-20 bg-gradient-to-b from-background via-muted/30 to-muted/50 relative">
+      {/* Section separator */}
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-success/40 to-transparent"></div>
+      <div className="absolute top-4 left-1/2 transform -translate-x-1/2">
+        <div className="w-2 h-2 bg-success/30 rounded-full animate-pulse"></div>
+      </div>
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">

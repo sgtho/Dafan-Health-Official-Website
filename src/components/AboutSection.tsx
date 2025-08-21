@@ -2,7 +2,9 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Building2, Users, MapPin, TrendingUp, Target, Handshake } from "lucide-react";
 const AboutSection = () => {
-  return <section id="about" className="py-16 md:py-20 bg-muted/30">
+  return <section id="about" className="py-16 md:py-20 bg-gradient-to-b from-background via-muted/20 to-muted/40 relative">
+      {/* Section divider line */}
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent"></div>
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">

@@ -54,7 +54,14 @@ const NewsSection = () => {
     description: "Targeting GTP certification and collaboration with regional major hospitals"
   }];
   return (
-    <section id="news" className="py-16 md:py-24 bg-gradient-to-b from-slate-50 to-white">
+    <section id="news" className="py-16 md:py-24 bg-gradient-to-b from-muted/50 via-slate-50/80 to-white relative">
+      {/* Visual section break */}
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent"></div>
+      <div className="absolute top-2 left-1/2 transform -translate-x-1/2 flex space-x-2">
+        <div className="w-1 h-1 bg-primary/40 rounded-full animate-pulse"></div>
+        <div className="w-1 h-1 bg-secondary/40 rounded-full animate-pulse" style={{animationDelay: '0.5s'}}></div>
+        <div className="w-1 h-1 bg-success/40 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
+      </div>
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-slate-900 mb-4">
