@@ -12,7 +12,7 @@ const PartnershipsSection = () => {
             Strategic Partnerships
           </Badge>
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
-            Collaborative Excellence in Research
+            Strategic Partnerships
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Building strong partnerships with leading academic institutions and healthcare 
@@ -155,46 +155,6 @@ const PartnershipsSection = () => {
           </div>
         </div>
 
-        {/* Partnership Benefits */}
-        <div className="text-center">
-          <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-8">
-            Partnership Benefits
-          </h3>
-          <div className="grid md:grid-cols-4 gap-6">
-            {[
-              {
-                icon: Globe,
-                title: "Global Network",
-                description: "Access to international research networks and collaboration opportunities"
-              },
-              {
-                icon: Users,
-                title: "Expert Knowledge",
-                description: "Shared expertise and scientific knowledge from leading institutions"
-              },
-              {
-                icon: Award,
-                title: "Quality Standards",
-                description: "Maintaining highest quality standards through institutional partnerships"
-              },
-              {
-                icon: Building2,
-                title: "Resource Sharing",
-                description: "Efficient utilization of research facilities and resources"
-              }
-            ].map((benefit, index) => (
-              <Card key={index} className="text-center border-0 shadow-card-soft">
-                <CardContent className="p-6">
-                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <benefit.icon className="w-6 h-6 text-primary" />
-                  </div>
-                  <h4 className="font-semibold mb-2">{benefit.title}</h4>
-                  <p className="text-sm text-muted-foreground">{benefit.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   );

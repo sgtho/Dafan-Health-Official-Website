@@ -56,7 +56,7 @@ const NewsSection = () => {
             Latest News & Updates
           </Badge>
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
-            Innovation in Progress
+            Latest News & Updates
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Stay updated with our latest research breakthroughs, partnerships, 

@@ -31,7 +31,7 @@ const TechnologySection = () => {
             </h3>
             <p className="text-muted-foreground mb-6 leading-relaxed">Our research facilities ensure the highest quality and safety in all our research and development processes.</p>
             <div className="space-y-4">
-              {["GMP-certified manufacturing facilities", "Advanced cell culture and processing systems", "Automated quality control and monitoring", "Cleanroom environments and sterile processing"].map((feature, index) => <div key={index} className="flex items-center space-x-3">
+            {["Advanced cell culture and processing systems", "Automated quality control and monitoring", "Cleanroom environments and sterile processing"].map((feature, index) => <div key={index} className="flex items-center space-x-3">
                   <CheckCircle className="w-5 h-5 text-success flex-shrink-0" />
                   <span className="text-muted-foreground">{feature}</span>
                 </div>)}
@@ -108,53 +108,6 @@ const TechnologySection = () => {
           </Card>
         </div>
 
-        {/* R&D Capabilities */}
-        <div className="text-center mb-12">
-          <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-8">
-            Research & Development Capabilities
-          </h3>
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-8">
-          <Card className="text-center border-0 shadow-card-soft">
-            <CardContent className="p-8">
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="w-8 h-8 text-primary" />
-              </div>
-              <h4 className="text-xl font-semibold mb-4">International Standards</h4>
-              <p className="text-muted-foreground">
-                Following GMP standards to ensure product quality and safety in all 
-                research and manufacturing processes.
-              </p>
-            </CardContent>
-          </Card>
-
-          <Card className="text-center border-0 shadow-card-soft">
-            <CardContent className="p-8">
-              <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <FlaskConical className="w-8 h-8 text-secondary" />
-              </div>
-              <h4 className="text-xl font-semibold mb-4">Clinical Translation</h4>
-              <p className="text-muted-foreground">
-                Translating cutting-edge research discoveries into practical clinical 
-                applications and therapeutic solutions.
-              </p>
-            </CardContent>
-          </Card>
-
-          <Card className="text-center border-0 shadow-card-soft">
-            <CardContent className="p-8">
-              <div className="w-16 h-16 bg-success/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Microscope className="w-8 h-8 text-success" />
-              </div>
-              <h4 className="text-xl font-semibold mb-4">Advanced Equipment</h4>
-              <p className="text-muted-foreground">
-                State-of-the-art laboratory equipment and instrumentation for 
-                precision research and development.
-              </p>
-            </CardContent>
-          </Card>
-        </div>
       </div>
     </section>;
 };
