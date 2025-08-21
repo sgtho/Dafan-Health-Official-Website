@@ -49,9 +49,7 @@ const Footer = () => {
               <button onClick={() => scrollToSection("partnerships")} className="block text-muted hover:text-background transition-colors">
                 Partnerships
               </button>
-              <button onClick={() => scrollToSection("news")} className="block text-muted hover:text-background transition-colors">
-                News
-              </button>
+              
               <button onClick={() => scrollToSection("contact")} className="block text-muted hover:text-background transition-colors">
                 Contact
               </button>
