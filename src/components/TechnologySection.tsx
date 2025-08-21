@@ -3,10 +3,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Microscope, Dna, FlaskConical, Shield, CheckCircle, ArrowRight } from "lucide-react";
 import technologyImage from "@/assets/technology-lab.jpg";
-
 const TechnologySection = () => {
-  return (
-    <section id="technology" className="py-20 bg-background">
+  return <section id="technology" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
@@ -25,32 +23,18 @@ const TechnologySection = () => {
         {/* Technology Overview */}
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
           <div>
-            <img 
-              src={technologyImage} 
-              alt="Advanced Biotechnology Laboratory" 
-              className="w-full h-96 object-cover rounded-lg shadow-card-soft"
-            />
+            <img src={technologyImage} alt="Advanced Biotechnology Laboratory" className="w-full h-96 object-cover rounded-lg shadow-card-soft" />
           </div>
           <div>
             <h3 className="text-2xl md:text-3xl font-bold mb-6">
               International Standards, Local Innovation
             </h3>
-            <p className="text-muted-foreground mb-6 leading-relaxed">
-              Our research facilities adhere to Good Manufacturing Practice (GMP) standards, 
-              ensuring the highest quality and safety in all our research and development processes.
-            </p>
+            <p className="text-muted-foreground mb-6 leading-relaxed">Our research facilities ensure the highest quality and safety in all our research and development processes.</p>
             <div className="space-y-4">
-              {[
-                "GMP-certified manufacturing facilities",
-                "Advanced cell culture and processing systems",
-                "Automated quality control and monitoring",
-                "Cleanroom environments and sterile processing"
-              ].map((feature, index) => (
-                <div key={index} className="flex items-center space-x-3">
+              {["GMP-certified manufacturing facilities", "Advanced cell culture and processing systems", "Automated quality control and monitoring", "Cleanroom environments and sterile processing"].map((feature, index) => <div key={index} className="flex items-center space-x-3">
                   <CheckCircle className="w-5 h-5 text-success flex-shrink-0" />
                   <span className="text-muted-foreground">{feature}</span>
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
         </div>
@@ -172,8 +156,6 @@ const TechnologySection = () => {
           </Card>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default TechnologySection;
