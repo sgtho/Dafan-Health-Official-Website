@@ -12,6 +12,9 @@ const PartnershipsSection = () => {
           src={partnershipsBackground} 
           alt="Professional partnership meeting" 
           className="w-full h-full object-cover"
+          width="1335"
+          height="1264"
+          loading="lazy"
         />
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900/85 via-blue-900/80 to-slate-800/90"></div>
       </div>

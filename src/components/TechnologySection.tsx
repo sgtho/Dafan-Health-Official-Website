@@ -26,7 +26,14 @@ const TechnologySection = () => {
         {/* Technology Overview */}
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
           <div>
-            <img src={technologyImage} alt="Advanced Biotechnology Laboratory" className="w-full h-96 object-cover rounded-lg shadow-card-soft" />
+            <img 
+              src={technologyImage} 
+              alt="Advanced Biotechnology Laboratory" 
+              className="w-full h-96 object-cover rounded-lg shadow-card-soft"
+              width="628"
+              height="384"
+              loading="lazy"
+            />
           </div>
           <div>
             <h3 className="text-2xl md:text-3xl font-bold mb-6">

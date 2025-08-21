@@ -13,6 +13,9 @@ const ContactSection = () => {
           src={contactBackground} 
           alt="Innovation laboratory collaboration" 
           className="w-full h-full object-cover"
+          width="1335"
+          height="856"
+          loading="lazy"
         />
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-indigo-800/85 to-purple-900/90"></div>
       </div>

@@ -48,7 +48,14 @@ const HeroSection = () => {
         </div>
         
         {/* Background image overlay */}
-        <img src={heroImage} alt="Stem Cell and Exosome Research Background" className="w-full h-full object-cover opacity-20" />
+        <img 
+          src={heroImage} 
+          alt="Stem Cell and Exosome Research Background" 
+          className="w-full h-full object-cover opacity-20"
+          width="1335"
+          height="940"
+          loading="eager"
+        />
       </div>
 
       {/* Content */}
