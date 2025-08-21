@@ -4,145 +4,94 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { MapPin, Phone, Mail, Building2, Users, CheckCircle } from "lucide-react";
+import contactBackground from "@/assets/contact-innovation-background.jpg";
 const ContactSection = () => {
-  return <section id="contact" className="py-16 md:py-20 bg-gradient-to-b from-white via-muted/20 to-muted/40 relative">
-      {/* Final section separator */}
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent"></div>
-      <div className="absolute top-4 left-1/2 transform -translate-x-1/2">
-        <div className="w-8 h-px bg-gradient-to-r from-primary/30 via-secondary/50 to-success/30"></div>
+  return <section id="contact" className="py-16 md:py-20 relative overflow-hidden">
+      {/* Background image with overlay */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src={contactBackground} 
+          alt="Innovation laboratory collaboration" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-indigo-800/85 to-purple-900/90"></div>
       </div>
-      <div className="container mx-auto px-4">
+      
+      {/* Final section separator */}
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-400/60 to-transparent z-10"></div>
+      <div className="absolute top-4 left-1/2 transform -translate-x-1/2 z-10">
+        <div className="w-8 h-px bg-gradient-to-r from-blue-300/50 via-purple-400/60 to-indigo-300/50"></div>
+      </div>
+      <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
-          <Badge variant="outline" className="mb-4 text-primary border-primary">
+          <Badge variant="outline" className="mb-4 text-blue-200 border-blue-200/50 bg-white/10 backdrop-blur-sm">
             Contact Us
           </Badge>
-          <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
+          <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
             Partner With Us in Innovation
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
             Ready to explore collaboration opportunities in regenerative medicine? 
             Contact our team to discuss partnerships and professional consulting.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
-          {/* Contact Information */}
-          <div>
-            <h3 className="text-2xl font-bold text-foreground mb-8">Get in Touch</h3>
-            
-            <div className="space-y-6 mb-8">
-              <Card className="border-0 shadow-card-soft">
-                <CardContent className="p-6">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                      <MapPin className="w-6 h-6 text-primary" />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold mb-2">Company Address</h4>
-                      <p className="text-muted-foreground">
-                        No. 2-1, 7th Rd., Industrial Park<br />
-                        Xitun District, Taichung City<br />
-                        Taiwan (Taichung Industrial Park)
-                      </p>
-                    </div>
+        {/* Contact Information - Centered Layout */}
+        <div className="max-w-4xl mx-auto">
+          <h3 className="text-2xl font-bold text-white text-center mb-12">Get in Touch</h3>
+          
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <Card className="border-0 bg-white/10 backdrop-blur-sm shadow-2xl">
+              <CardContent className="p-6">
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-blue-400/20 rounded-full flex items-center justify-center flex-shrink-0">
+                    <MapPin className="w-6 h-6 text-blue-300" />
                   </div>
-                </CardContent>
-              </Card>
-
-              <Card className="border-0 shadow-card-soft">
-                
-              </Card>
-
-              <Card className="border-0 shadow-card-soft">
-                <CardContent className="p-6">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-success/10 rounded-full flex items-center justify-center flex-shrink-0">
-                      <Building2 className="w-6 h-6 text-success" />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold mb-2">Industry Focus</h4>
-                      <p className="text-muted-foreground">
-                        Biochemical Technology R&D<br />
-                        Biotechnology Research
-                      </p>
-                    </div>
+                  <div>
+                    <h4 className="font-semibold mb-2 text-white">Company Address</h4>
+                    <p className="text-blue-100">
+                      No. 2-1, 7th Rd., Industrial Park<br />
+                      Xitun District, Taichung City<br />
+                      Taiwan (Taichung Industrial Park)
+                    </p>
                   </div>
-                </CardContent>
-              </Card>
-            </div>
+                </div>
+              </CardContent>
+            </Card>
 
-            {/* Why Choose Us */}
-            <Card className="border-0 shadow-card-soft">
-              <CardHeader>
-                <CardTitle>Why Partner with Dafen Health?</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-3">
-                  {["Professional regenerative medicine R&D team", "Industry-academia collaboration with national hospitals", "International standard quality management", "Innovative stem cell and exosome technology"].map((item, index) => <div key={index} className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-success flex-shrink-0" />
-                      <span className="text-muted-foreground">{item}</span>
-                    </div>)}
+            <Card className="border-0 bg-white/10 backdrop-blur-sm shadow-2xl">
+              <CardContent className="p-6">
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-purple-400/20 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Building2 className="w-6 h-6 text-purple-300" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold mb-2 text-white">Industry Focus</h4>
+                    <p className="text-blue-100">
+                      Biochemical Technology R&D<br />
+                      Biotechnology Research
+                    </p>
+                  </div>
                 </div>
               </CardContent>
             </Card>
           </div>
 
-          {/* Contact Form */}
-          <div>
-            <Card className="border-0 shadow-card-soft">
-              <CardHeader>
-                <CardTitle>Send us a Message</CardTitle>
-                <p className="text-muted-foreground">
-                  Fill out the form below and we'll get back to you within 1-2 business days.
-                </p>
-              </CardHeader>
-              <CardContent>
-                <form className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <label className="text-sm font-medium">Name *</label>
-                      <Input placeholder="Enter your full name" />
-                    </div>
-                    <div className="space-y-2">
-                      <label className="text-sm font-medium">Company/Organization</label>
-                      <Input placeholder="Your company or organization" />
-                    </div>
-                  </div>
-                  
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <label className="text-sm font-medium">Email *</label>
-                      <Input type="email" placeholder="your.email@example.com" />
-                    </div>
-                    <div className="space-y-2">
-                      <label className="text-sm font-medium">Phone</label>
-                      <Input placeholder="Your phone number" />
-                    </div>
-                  </div>
-
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium">Subject *</label>
-                    <Input placeholder="Brief subject of your inquiry" />
-                  </div>
-
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium">Message *</label>  
-                    <Textarea placeholder="Please describe your needs, interests, or questions in detail..." className="min-h-[120px]" />
-                  </div>
-
-                  <div className="text-sm text-muted-foreground bg-muted/50 p-4 rounded-lg">
-                    <Mail className="w-4 h-4 inline mr-2" />
-                    We will respond to your inquiry within 1-2 business days.
-                  </div>
-
-                  <Button type="submit" size="lg" className="w-full shadow-medical">
-                    Send Message
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
-          </div>
+          {/* Why Choose Us */}
+          <Card className="border-0 bg-white/10 backdrop-blur-sm shadow-2xl">
+            <CardHeader>
+              <CardTitle className="text-white text-center">Why Partner with Dafen Health?</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="grid md:grid-cols-2 gap-4">
+                {["Professional regenerative medicine R&D team", "Industry-academia collaboration with national hospitals", "International standard quality management", "Innovative stem cell and exosome technology"].map((item, index) => <div key={index} className="flex items-center space-x-3">
+                    <CheckCircle className="w-5 h-5 text-green-300 flex-shrink-0" />
+                    <span className="text-blue-100">{item}</span>
+                  </div>)}
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>;
