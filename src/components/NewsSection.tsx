@@ -2,6 +2,18 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const NewsSection = () => {
   const milestones = [{
+    year: "1989",
+    event: "Stem Cell Periodontal Treatment",
+    description: "Applied autologous stem cells to periodontal disease treatment"
+  }, {
+    year: "1997",
+    event: "Burn Treatment Innovation",
+    description: "Applied autologous stem-cell transplantation techniques to burn treatment"
+  }, {
+    year: "2010",
+    event: "Academic Recognition",
+    description: "Conducted industry–academia collaboration with USC professor; submitted paper to Oral Diseases and received 'Best Original Paper Award'"
+  }, {
     year: "2020",
     event: "Company Establishment",
     description: "DaFan Health Co., Ltd. officially established with focus on regenerative medicine development"
