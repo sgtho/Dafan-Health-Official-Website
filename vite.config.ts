@@ -19,4 +19,19 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  build: {
+    // Optimize CSS handling for better performance
+    cssCodeSplit: true,
+    rollupOptions: {
+      output: {
+        // Separate CSS chunks for better caching
+        assetFileNames: (assetInfo) => {
+          if (assetInfo.name?.endsWith('.css')) {
+            return 'assets/[name]-[hash].css';
+          }
+          return 'assets/[name]-[hash][extname]';
+        },
+      },
+    },
+  },
 }));
