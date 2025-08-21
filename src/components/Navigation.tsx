@@ -17,14 +17,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16 bg-slate-50">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <img 
-              src="/lovable-uploads/732bdfe2-ef82-4065-a908-3222b6f1142f.png" 
-              alt="DaFan Health Logo" 
-              className="h-8 w-auto"
-              width="49"
-              height="32"
-              loading="eager"
-            />
+            <img src="/lovable-uploads/732bdfe2-ef82-4065-a908-3222b6f1142f.png" alt="Dafen Health Logo" className="h-8 w-auto" width="49" height="32" loading="eager" />
             <span className="text-xl font-bold text-indigo-900">DaFan Health</span>
           </div>
 
