@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Microscope, Shield, Award } from "lucide-react";
+import { ArrowRight, Microscope, Zap, TrendingUp, Sparkles } from "lucide-react";
 import heroImage from "@/assets/stem-cell-background.jpg";
 const HeroSection = () => {
   const scrollToSection = (id: string) => {
@@ -10,57 +10,146 @@ const HeroSection = () => {
       });
     }
   };
-  return <section id="home" className="relative min-h-screen flex items-center bg-slate-900 overflow-hidden pt-20">
-      {/* Background Image */}
+  return <section id="home" className="relative min-h-screen flex items-center overflow-hidden pt-20 bg-gradient-to-br from-purple-900 via-slate-900 to-cyan-900">
+      {/* Dynamic Animated Background */}
       <div className="absolute inset-0 z-0">
-        <img src={heroImage} alt="Stem Cell and Exosome Research Background" className="w-full h-full object-cover opacity-60" />
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-900/70 to-slate-800/90"></div>
+        {/* Animated flowing ribbons */}
+        <div className="absolute inset-0">
+          <svg className="absolute w-full h-full" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+            <defs>
+              <linearGradient id="ribbon1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="rgb(34, 197, 94)" stopOpacity="0.8"/>
+                <stop offset="50%" stopColor="rgb(14, 165, 233)" stopOpacity="0.6"/>
+                <stop offset="100%" stopColor="rgb(168, 85, 247)" stopOpacity="0.4"/>
+              </linearGradient>
+              <linearGradient id="ribbon2" x1="0%" y1="100%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="rgb(251, 191, 36)" stopOpacity="0.7"/>
+                <stop offset="50%" stopColor="rgb(14, 165, 233)" stopOpacity="0.5"/>
+                <stop offset="100%" stopColor="rgb(168, 85, 247)" stopOpacity="0.3"/>
+              </linearGradient>
+            </defs>
+            
+            {/* Flowing ribbon 1 */}
+            <path 
+              d="M0,400 Q480,200 960,400 T1920,400 L1920,600 Q1440,800 960,600 T0,600 Z" 
+              fill="url(#ribbon1)"
+              className="animate-[wave_8s_ease-in-out_infinite]"
+            />
+            
+            {/* Flowing ribbon 2 */}
+            <path 
+              d="M0,600 Q480,800 960,600 T1920,600 L1920,800 Q1440,400 960,800 T0,800 Z" 
+              fill="url(#ribbon2)"
+              className="animate-[wave_12s_ease-in-out_infinite_reverse]"
+            />
+          </svg>
+        </div>
+        
+        {/* Floating particles */}
+        <div className="absolute inset-0">
+          {[...Array(20)].map((_, i) => (
+            <div
+              key={i}
+              className="absolute w-2 h-2 bg-white/20 rounded-full animate-float"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 4}s`,
+                animationDuration: `${3 + Math.random() * 4}s`
+              }}
+            />
+          ))}
+        </div>
+        
+        {/* Background image overlay */}
+        <img src={heroImage} alt="Stem Cell and Exosome Research Background" className="w-full h-full object-cover opacity-20" />
       </div>
 
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
-          {/* Badge */}
-          <div className="inline-flex items-center space-x-2 bg-primary-light text-primary px-4 py-2 rounded-full text-sm font-medium mb-6 animate-fade-in">
-            <Microscope className="w-4 h-4" />
-            <span>Leading Regenerative Medicine Innovation</span>
+        <div className="max-w-5xl mx-auto text-center">
+          {/* Energetic Badge */}
+          <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-green-400/20 to-blue-400/20 backdrop-blur-sm border border-white/20 text-white px-6 py-3 rounded-full text-sm font-medium mb-8 animate-fade-in shadow-lg">
+            <Sparkles className="w-5 h-5 text-yellow-400 animate-pulse" />
+            <span className="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent font-bold">
+              SPARKING DISCOVERY, ELEVATING LIFE
+            </span>
+            <Zap className="w-5 h-5 text-yellow-400 animate-pulse" />
           </div>
 
-          {/* Main Heading */}
-          <h1 className="md:text-6xl font-bold text-white mb-6 animate-fade-in py-[20px] text-5xl">
-            Advancing
-            <span className="text-primary"> Stem Cell </span>
-            &
-            <span className="text-secondary"> Exosome </span>
-            <br />
-            Drug Development
+          {/* Dynamic Main Heading */}
+          <h1 className="text-4xl md:text-7xl font-black text-white mb-8 animate-fade-in leading-tight">
+            <span className="block text-transparent bg-gradient-to-r from-green-400 via-blue-400 to-purple-400 bg-clip-text animate-shimmer">
+              REVOLUTIONIZING
+            </span>
+            <span className="block mt-2">
+              <span className="text-cyan-400 animate-pulse">STEM CELL</span>
+              <span className="text-white mx-4">&</span>
+              <span className="text-green-400 animate-pulse">EXOSOME</span>
+            </span>
+            <span className="block mt-2 text-2xl md:text-4xl font-bold text-white/90">
+              THERAPEUTICS
+            </span>
           </h1>
 
-          {/* Subtitle */}
-          <p className="md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed animate-slide-in-right text-slate-50 text-sm">
-            Dafen Health is an innovative biotechnology company focused on cutting-edge regenerative medicine research and development, creating safe, effective, and high-quality therapeutic solutions.
+          {/* Dynamic Subtitle */}
+          <p className="text-lg md:text-2xl mb-10 max-w-4xl mx-auto leading-relaxed animate-slide-in-right text-white/90 font-medium">
+            <span className="text-cyan-300">Breakthrough biotechnology</span> meets 
+            <span className="text-green-300"> cutting-edge research</span> to create 
+            <span className="text-purple-300"> life-changing therapeutic solutions</span>
           </p>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-scale-in">
-            <Button size="lg" className="text-lg px-8 py-6 shadow-medical" onClick={() => scrollToSection("technology")}>
-              Our Technology
-              <ArrowRight className="ml-2 w-5 h-5" />
+          {/* Energetic CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16 animate-scale-in">
+            <Button 
+              size="lg" 
+              className="relative text-xl px-10 py-8 bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-400 hover:to-blue-400 border-0 shadow-2xl transform transition-all duration-300 hover:scale-105 group overflow-hidden" 
+              onClick={() => scrollToSection("technology")}
+            >
+              <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <TrendingUp className="mr-3 w-6 h-6 animate-pulse" />
+              EXPLORE INNOVATION
+              <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
             </Button>
-            <Button variant="outline" size="lg" className="text-lg px-8 py-6" onClick={() => scrollToSection("contact")}>
-              Partner With Us
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="text-xl px-10 py-8 border-2 border-white/50 text-white bg-white/10 backdrop-blur-sm hover:bg-white/20 hover:border-white transition-all duration-300 hover:scale-105" 
+              onClick={() => scrollToSection("contact")}
+            >
+              <Microscope className="mr-3 w-6 h-6" />
+              JOIN THE REVOLUTION
             </Button>
           </div>
 
-          {/* Key Features */}
-          
+          {/* Energy Indicators */}
+          <div className="flex justify-center space-x-8 text-white/80">
+            <div className="text-center animate-bounce" style={{animationDelay: '0s'}}>
+              <div className="w-16 h-16 mx-auto mb-2 bg-gradient-to-br from-green-400 to-blue-500 rounded-full flex items-center justify-center">
+                <Sparkles className="w-8 h-8 text-white" />
+              </div>
+              <div className="text-sm font-semibold">INNOVATIVE</div>
+            </div>
+            <div className="text-center animate-bounce" style={{animationDelay: '0.5s'}}>
+              <div className="w-16 h-16 mx-auto mb-2 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center">
+                <Zap className="w-8 h-8 text-white" />
+              </div>
+              <div className="text-sm font-semibold">DYNAMIC</div>
+            </div>
+            <div className="text-center animate-bounce" style={{animationDelay: '1s'}}>
+              <div className="w-16 h-16 mx-auto mb-2 bg-gradient-to-br from-purple-400 to-green-500 rounded-full flex items-center justify-center">
+                <TrendingUp className="w-8 h-8 text-white" />
+              </div>
+              <div className="text-sm font-semibold">PROGRESSIVE</div>
+            </div>
+          </div>
         </div>
       </div>
 
-      {/* Scroll Indicator */}
+      {/* Energetic Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
-        <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center animate-float">
-          <div className="w-1 h-3 bg-white rounded-full mt-2"></div>
+        <div className="w-8 h-12 border-2 border-white/60 rounded-full flex justify-center animate-pulse bg-white/10 backdrop-blur-sm">
+          <div className="w-2 h-4 bg-gradient-to-b from-green-400 to-blue-400 rounded-full mt-2 animate-bounce"></div>
         </div>
       </div>
     </section>;
