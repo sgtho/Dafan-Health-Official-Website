@@ -4,14 +4,11 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
-export default defineConfig({
-  base: '/Dafan-Health-Official-Website/'
-  // ...add your plugins and other config options here
-}),
+export default defineConfig(({ mode }) => ({
+  base: '/Dafan-Health-Official-Website/',
   plugins: [
     react(),
-    mode === 'development' &&
-    componentTagger(),
+    mode === 'development' && componentTagger(),
   ].filter(Boolean),
   resolve: {
     alias: {
