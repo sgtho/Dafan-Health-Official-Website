@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { MapPin, Phone, Mail, Building2, Users, CheckCircle } from "lucide-react";
 const ContactSection = () => {
-  return <section id="contact" className="py-20 bg-muted/30">
+  return <section id="contact" className="py-16 md:py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">

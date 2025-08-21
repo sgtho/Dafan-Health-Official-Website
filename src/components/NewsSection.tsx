@@ -54,7 +54,7 @@ const NewsSection = () => {
     description: "Targeting GTP certification and collaboration with regional major hospitals"
   }];
   return (
-    <section id="news" className="py-24 bg-gradient-to-b from-slate-50 to-white">
+    <section id="news" className="py-16 md:py-24 bg-gradient-to-b from-slate-50 to-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-slate-900 mb-4">

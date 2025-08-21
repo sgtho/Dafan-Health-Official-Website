@@ -2,7 +2,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Building2, Users, MapPin, TrendingUp, Target, Handshake } from "lucide-react";
 const AboutSection = () => {
-  return <section id="about" className="bg-muted/30 py-0">
+  return <section id="about" className="py-16 md:py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">

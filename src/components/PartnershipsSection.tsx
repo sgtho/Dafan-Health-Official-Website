@@ -4,7 +4,7 @@ import { Building2, GraduationCap, Hospital, Globe, Users, Award } from "lucide-
 
 const PartnershipsSection = () => {
   return (
-    <section id="partnerships" className="py-20 bg-muted/30">
+    <section id="partnerships" className="py-16 md:py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">

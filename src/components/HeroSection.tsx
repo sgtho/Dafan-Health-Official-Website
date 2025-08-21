@@ -74,9 +74,9 @@ const HeroSection = () => {
 
           {/* Dynamic Subtitle */}
           <p className="text-lg md:text-2xl mb-10 max-w-4xl mx-auto leading-relaxed animate-slide-in-right text-white font-medium">
-            <span className="text-cyan-300">Breakthrough biotechnology</span> meets 
-            <span className="text-green-300"> cutting-edge research</span> to create 
-            <span className="text-purple-300"> life-changing therapeutic solutions</span>
+            <span className="text-white">Breakthrough biotechnology</span> meets 
+            <span className="text-white"> cutting-edge research</span> to create 
+            <span className="text-white"> life-changing therapeutic solutions</span>
           </p>
 
           {/* Energetic CTA Buttons */}

@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Microscope, Dna, FlaskConical, Shield, CheckCircle, ArrowRight } from "lucide-react";
 import technologyImage from "@/assets/technology-lab.jpg";
 const TechnologySection = () => {
-  return <section id="technology" className="py-20 bg-background">
+  return <section id="technology" className="py-16 md:py-20 bg-background">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
