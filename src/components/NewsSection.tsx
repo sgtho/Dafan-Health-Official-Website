@@ -53,14 +53,17 @@ const NewsSection = () => {
     event: "GTP Certification Goal",
     description: "Targeting GTP certification and collaboration with regional major hospitals"
   }];
-  return (
-    <section id="news" className="py-16 md:py-24 bg-gradient-to-b from-muted/50 via-slate-50/80 to-white relative">
+  return <section id="news" className="py-16 md:py-24 bg-gradient-to-b from-muted/50 via-slate-50/80 to-white relative">
       {/* Visual section break */}
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent"></div>
       <div className="absolute top-2 left-1/2 transform -translate-x-1/2 flex space-x-2">
         <div className="w-1 h-1 bg-primary/40 rounded-full animate-pulse"></div>
-        <div className="w-1 h-1 bg-secondary/40 rounded-full animate-pulse" style={{animationDelay: '0.5s'}}></div>
-        <div className="w-1 h-1 bg-success/40 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
+        <div className="w-1 h-1 bg-secondary/40 rounded-full animate-pulse" style={{
+        animationDelay: '0.5s'
+      }}></div>
+        <div className="w-1 h-1 bg-success/40 rounded-full animate-pulse" style={{
+        animationDelay: '1s'
+      }}></div>
       </div>
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
@@ -73,47 +76,11 @@ const NewsSection = () => {
         </div>
 
         {/* News Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {newsItems.map((item, index) => {
-            const IconComponent = item.icon;
-            return (
-              <Card key={index} className="hover-scale group cursor-pointer border-0 shadow-lg">
-                <CardHeader className="pb-4">
-                  <div className="flex items-center justify-between mb-3">
-                    <Badge variant="outline" className="text-xs">
-                      {item.category}
-                    </Badge>
-                    <div className={`p-2 rounded-lg bg-${item.color}/10`}>
-                      <IconComponent className={`w-5 h-5 text-${item.color}`} />
-                    </div>
-                  </div>
-                  <div className="flex items-center text-sm text-slate-500 mb-2">
-                    <Calendar className="w-4 h-4 mr-2" />
-                    {item.date}
-                  </div>
-                  <h3 className="text-lg font-semibold text-slate-900 group-hover:text-primary transition-colors">
-                    {item.title}
-                  </h3>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-slate-600 text-sm leading-relaxed mb-4">
-                    {item.content}
-                  </p>
-                  <Button variant="ghost" size="sm" className="text-primary hover:text-primary-dark p-0">
-                    Learn More
-                    <ArrowRight className="ml-2 w-4 h-4" />
-                  </Button>
-                </CardContent>
-              </Card>
-            );
-          })}
-        </div>
+        
 
         {/* Timeline */}
         <div className="relative">
-          <h3 className="text-2xl font-bold text-slate-900 text-center mb-12">
-            Our <span className="text-primary">Journey</span>
-          </h3>
+          
           
           {/* Mobile-first timeline */}
           <div className="relative max-w-4xl mx-auto">
@@ -123,8 +90,7 @@ const NewsSection = () => {
             <div className="md:hidden absolute left-6 top-0 w-0.5 h-full bg-gradient-to-b from-primary to-secondary"></div>
             
             <div className="space-y-8 md:space-y-12">
-              {milestones.map((milestone, index) => (
-                <div key={index} className="relative">
+              {milestones.map((milestone, index) => <div key={index} className="relative">
                   {/* Mobile layout */}
                   <div className="md:hidden">
                     <div className="flex items-start">
@@ -158,13 +124,11 @@ const NewsSection = () => {
                       <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-white shadow-lg z-10"></div>
                     </div>
                   </div>
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
 export default NewsSection;
