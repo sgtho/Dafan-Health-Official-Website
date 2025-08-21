@@ -192,7 +192,7 @@ const ContactSection = () => {
             {/* Why Choose Us */}
             <Card className="border-0 bg-white/10 backdrop-blur-sm shadow-2xl">
               <CardHeader>
-                <CardTitle className="text-white text-center">Why Partner with Dafen Health?</CardTitle>
+                <CardTitle className="text-white text-center">Why Partner with DaFan Health?</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="grid md:grid-cols-2 gap-4">

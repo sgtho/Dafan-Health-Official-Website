@@ -9,7 +9,7 @@ const AboutSection = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <Badge variant="outline" className="mb-4 text-primary border-primary py-0 my-[20px]">
-            About Dafen Health
+            About DaFan Health
           </Badge>
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
             Pioneering the Future of Regenerative Medicine

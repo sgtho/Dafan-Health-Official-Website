@@ -153,7 +153,7 @@ const translations = {
     footer_capital_value: "新台幣1億9660萬元",
     footer_employees_label: "員工人數：",
     footer_employees_value: "15人",
-    footer_copyright: "© 2024 大凡健康股份有限公司 Dafen Health Co., Ltd. 版權所有",
+    footer_copyright: "© 2024 大凡健康股份有限公司 DaFan Health Co., Ltd. 版權所有",
     footer_tagline: "專注於幹細胞與外泌體新藥研發 | 再生醫療創新領導品牌"
   },
   
@@ -174,7 +174,7 @@ const translations = {
     hero_title_3: "&",
     hero_title_4: "Exosome",
     hero_title_5: "R&D Innovation",
-    hero_subtitle: "Dafen Health focuses on cutting-edge biotechnology R&D, collaborating with national teaching hospitals to provide superior and precise healthcare solutions",
+    hero_subtitle: "DaFan Health focuses on cutting-edge biotechnology R&D, collaborating with national teaching hospitals to provide superior and precise healthcare solutions",
     hero_cta_products: "Explore Our Services",
     hero_cta_contact: "Contact Our Team",
     hero_feature_1_title: "Professional R&D",
@@ -214,7 +214,7 @@ const translations = {
     research_3_desc: "Translating R&D results into practical clinical applications",
 
     // About Section
-    about_badge: "About Dafen Health",
+    about_badge: "About DaFan Health",
     about_title: "Innovative Enterprise Actively Promoting Regenerative Medicine",
     about_subtitle: "With 'Biotech Innovation × Regenerative Medicine × Health Future' as our core, committed to integrating clinical needs with R&D capabilities",
     
@@ -263,7 +263,7 @@ const translations = {
     contact_industry: "Biochemical Technology R&D",
     contact_industry_note: "Biotechnology Research",
     
-    why_choose_title: "Why Choose Dafen Health?",
+    why_choose_title: "Why Choose DaFan Health?",
     why_choose_1: "Professional regenerative medicine R&D team",
     why_choose_2: "Industry-academia collaboration with national hospitals",
     why_choose_3: "International standard quality management",
@@ -301,7 +301,7 @@ const translations = {
     footer_capital_value: "NT$196.6 Million",
     footer_employees_label: "Employees: ",
     footer_employees_value: "15 People",
-    footer_copyright: "© 2024 Dafen Health Co., Ltd. All rights reserved",
+    footer_copyright: "© 2024 DaFan Health Co., Ltd. All rights reserved",
     footer_tagline: "Focused on Stem Cell & Exosome Drug Development | Leading Innovation in Regenerative Medicine"
   }
 };

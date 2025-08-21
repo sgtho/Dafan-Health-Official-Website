@@ -16,13 +16,13 @@ const Footer = () => {
             <div className="flex items-center space-x-3 mb-4">
               <img 
                 src="/lovable-uploads/732bdfe2-ef82-4065-a908-3222b6f1142f.png" 
-                alt="Dafen Health Logo" 
+                alt="DaFan Health Logo" 
                 className="h-6 w-auto brightness-0 invert"
                 width="37"
                 height="24"
                 loading="lazy"
               />
-              <span className="text-xl font-bold">Dafen Health Co., Ltd.</span>
+              <span className="text-xl font-bold">DaFan Health Co., Ltd.</span>
             </div>
             <p className="text-muted mb-6 leading-relaxed">
               Dedicated to applying cutting-edge biotechnology with strong growth potential. 
@@ -95,7 +95,7 @@ const Footer = () => {
         <div className="border-t border-muted/20 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-sm text-muted mb-4 md:mb-0">
-              © 2024 Dafen Health Co., Ltd. All rights reserved
+              © 2024 DaFan Health Co., Ltd. All rights reserved
             </div>
             <div className="text-sm text-muted text-center md:text-right">
               Focused on Stem Cell & Exosome Drug Development | Leading Innovation in Regenerative Medicine

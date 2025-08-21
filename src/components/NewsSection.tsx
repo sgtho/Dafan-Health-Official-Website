@@ -4,7 +4,7 @@ const NewsSection = () => {
   const milestones = [{
     year: "2020",
     event: "Company Establishment",
-    description: "Dafen Health Co., Ltd. officially established with focus on regenerative medicine development"
+    description: "DaFan Health Co., Ltd. officially established with focus on regenerative medicine development"
   }, {
     year: "2021",
     event: "Facility Planning",
