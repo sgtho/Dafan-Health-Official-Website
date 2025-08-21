@@ -30,9 +30,8 @@ const AboutSection = () => {
               </div>
               <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
               <p className="text-muted-foreground leading-relaxed">
-                To provide professional health and medical consulting services while continuously 
-                advancing biotechnology research, delivering superior and more precise healthcare 
-                solutions to improve global health outcomes.
+                Providing professional health consulting and advancing biotechnology research 
+                to deliver superior healthcare solutions for improved global health.
               </p>
             </CardContent>
           </Card>
