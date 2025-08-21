@@ -5,7 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/Dafan-Health-Official-Website/',
+  base: '/Dafan-Health-Official-Website/'
   // ...add your plugins and other config options here
 }),
   plugins: [
