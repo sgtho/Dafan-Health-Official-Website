@@ -16,6 +16,7 @@ export default defineConfig(({ mode }) => ({
     },
   },
   build: {
+    sourcemap: true,
     // Optimize CSS handling for better performance
     cssCodeSplit: true,
     rollupOptions: {
