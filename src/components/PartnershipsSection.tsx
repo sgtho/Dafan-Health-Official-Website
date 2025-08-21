@@ -2,20 +2,11 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Building2, GraduationCap, Hospital, Globe, Users, Award } from "lucide-react";
 import partnershipsBackground from "@/assets/partnerships-background.jpg";
-
 const PartnershipsSection = () => {
-  return (
-    <section id="partnerships" className="py-16 md:py-20 relative overflow-hidden">
+  return <section id="partnerships" className="py-16 md:py-20 relative overflow-hidden">
       {/* Background image with overlay */}
       <div className="absolute inset-0 z-0">
-        <img 
-          src={partnershipsBackground} 
-          alt="Professional partnership meeting" 
-          className="w-full h-full object-cover"
-          width="1335"
-          height="1264"
-          loading="lazy"
-        />
+        <img src={partnershipsBackground} alt="Professional partnership meeting" className="w-full h-full object-cover" width="1335" height="1264" loading="lazy" />
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900/85 via-blue-900/80 to-slate-800/90"></div>
       </div>
       
@@ -82,101 +73,9 @@ const PartnershipsSection = () => {
         </div>
 
         {/* Key Partners */}
-        <div className="mb-16">
-          <h3 className="text-2xl md:text-3xl font-bold text-center text-white mb-12">
-            Our Key Partners
-          </h3>
-          
-          <div className="grid md:grid-cols-2 gap-8">
-            <Card className="border-0 bg-white/10 backdrop-blur-sm shadow-2xl hover:bg-white/15 transition-all duration-300">
-              <CardContent className="p-8">
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-cyan-400/20 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Hospital className="w-6 h-6 text-cyan-300" />
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-semibold mb-2 text-white">National Defense Medical Center</h4>
-                    <p className="text-cyan-100 mb-4">
-                      Long-term collaboration in regenerative medicine research and clinical studies, 
-                      focusing on stem cell and exosome applications.
-                    </p>
-                    <div className="flex items-center space-x-2 text-sm text-cyan-300">
-                      <Award className="w-4 h-4" />
-                      <span>Academic Exchange Program</span>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="border-0 bg-white/10 backdrop-blur-sm shadow-2xl hover:bg-white/15 transition-all duration-300">
-              <CardContent className="p-8">
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-blue-400/20 rounded-full flex items-center justify-center flex-shrink-0">
-                    <GraduationCap className="w-6 h-6 text-blue-300" />
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-semibold mb-2 text-white">National Yang Ming Chiao Tung University</h4>
-                    <p className="text-cyan-100 mb-4">
-                      Strategic research partnerships in biotechnology innovation and 
-                      advanced therapeutic development.
-                    </p>
-                    <div className="flex items-center space-x-2 text-sm text-blue-300">
-                      <Users className="w-4 h-4" />
-                      <span>Joint Research Programs</span>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="border-0 bg-white/10 backdrop-blur-sm shadow-2xl hover:bg-white/15 transition-all duration-300">
-              <CardContent className="p-8">
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-teal-400/20 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Building2 className="w-6 h-6 text-teal-300" />
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-semibold mb-2 text-white">Industrial Technology Research Institute</h4>
-                    <p className="text-cyan-100 mb-4">
-                      Collaboration on GTP facility planning and construction, advancing 
-                      manufacturing capabilities and process optimization.
-                    </p>
-                    <div className="flex items-center space-x-2 text-sm text-teal-300">
-                      <Globe className="w-4 h-4" />
-                      <span>Technology Transfer Program</span>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="border-0 bg-white/10 backdrop-blur-sm shadow-2xl hover:bg-white/15 transition-all duration-300">
-              <CardContent className="p-8">
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-amber-400/20 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Award className="w-6 h-6 text-amber-300" />
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-semibold mb-2 text-white">Siyuan Foundation</h4>
-                    <p className="text-cyan-100 mb-4">
-                      Academic exchange and research collaboration focusing on 
-                      innovative biotechnology applications and knowledge sharing.
-                    </p>
-                    <div className="flex items-center space-x-2 text-sm text-amber-300">
-                      <Users className="w-4 h-4" />
-                      <span>Research Exchange</span>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
+        
 
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default PartnershipsSection;
