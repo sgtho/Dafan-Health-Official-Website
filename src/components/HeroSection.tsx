@@ -18,47 +18,33 @@ const HeroSection = () => {
           <svg className="absolute w-full h-full" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
             <defs>
               <linearGradient id="ribbon1" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="rgb(34, 197, 94)" stopOpacity="0.8"/>
-                <stop offset="50%" stopColor="rgb(14, 165, 233)" stopOpacity="0.6"/>
-                <stop offset="100%" stopColor="rgb(168, 85, 247)" stopOpacity="0.4"/>
+                <stop offset="0%" stopColor="rgb(34, 197, 94)" stopOpacity="0.8" />
+                <stop offset="50%" stopColor="rgb(14, 165, 233)" stopOpacity="0.6" />
+                <stop offset="100%" stopColor="rgb(168, 85, 247)" stopOpacity="0.4" />
               </linearGradient>
               <linearGradient id="ribbon2" x1="0%" y1="100%" x2="100%" y2="0%">
-                <stop offset="0%" stopColor="rgb(251, 191, 36)" stopOpacity="0.7"/>
-                <stop offset="50%" stopColor="rgb(14, 165, 233)" stopOpacity="0.5"/>
-                <stop offset="100%" stopColor="rgb(168, 85, 247)" stopOpacity="0.3"/>
+                <stop offset="0%" stopColor="rgb(251, 191, 36)" stopOpacity="0.7" />
+                <stop offset="50%" stopColor="rgb(14, 165, 233)" stopOpacity="0.5" />
+                <stop offset="100%" stopColor="rgb(168, 85, 247)" stopOpacity="0.3" />
               </linearGradient>
             </defs>
             
             {/* Flowing ribbon 1 */}
-            <path 
-              d="M0,400 Q480,200 960,400 T1920,400 L1920,600 Q1440,800 960,600 T0,600 Z" 
-              fill="url(#ribbon1)"
-              className="animate-[wave_8s_ease-in-out_infinite]"
-            />
+            <path d="M0,400 Q480,200 960,400 T1920,400 L1920,600 Q1440,800 960,600 T0,600 Z" fill="url(#ribbon1)" className="animate-[wave_8s_ease-in-out_infinite]" />
             
             {/* Flowing ribbon 2 */}
-            <path 
-              d="M0,600 Q480,800 960,600 T1920,600 L1920,800 Q1440,400 960,800 T0,800 Z" 
-              fill="url(#ribbon2)"
-              className="animate-[wave_12s_ease-in-out_infinite_reverse]"
-            />
+            <path d="M0,600 Q480,800 960,600 T1920,600 L1920,800 Q1440,400 960,800 T0,800 Z" fill="url(#ribbon2)" className="animate-[wave_12s_ease-in-out_infinite_reverse]" />
           </svg>
         </div>
         
         {/* Floating particles */}
         <div className="absolute inset-0">
-          {[...Array(20)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute w-2 h-2 bg-white/20 rounded-full animate-float"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 4}s`,
-                animationDuration: `${3 + Math.random() * 4}s`
-              }}
-            />
-          ))}
+          {[...Array(20)].map((_, i) => <div key={i} className="absolute w-2 h-2 bg-white/20 rounded-full animate-float" style={{
+          left: `${Math.random() * 100}%`,
+          top: `${Math.random() * 100}%`,
+          animationDelay: `${Math.random() * 4}s`,
+          animationDuration: `${3 + Math.random() * 4}s`
+        }} />)}
         </div>
         
         {/* Background image overlay */}
@@ -69,13 +55,7 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-5xl mx-auto text-center">
           {/* Energetic Badge */}
-          <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-green-400/20 to-blue-400/20 backdrop-blur-sm border border-white/20 text-white px-6 py-3 rounded-full text-sm font-medium mb-8 animate-fade-in shadow-lg">
-            <Sparkles className="w-5 h-5 text-yellow-400 animate-pulse" />
-            <span className="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent font-bold">
-              SPARKING DISCOVERY, ELEVATING LIFE
-            </span>
-            <Zap className="w-5 h-5 text-yellow-400 animate-pulse" />
-          </div>
+          
 
           {/* Dynamic Main Heading */}
           <h1 className="text-4xl md:text-7xl font-black text-white mb-8 animate-fade-in leading-tight">
@@ -100,49 +80,10 @@ const HeroSection = () => {
           </p>
 
           {/* Energetic CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16 animate-scale-in">
-            <Button 
-              size="lg" 
-              className="relative text-xl px-10 py-8 bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-400 hover:to-blue-400 border-0 shadow-2xl transform transition-all duration-300 hover:scale-105 group overflow-hidden" 
-              onClick={() => scrollToSection("technology")}
-            >
-              <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <TrendingUp className="mr-3 w-6 h-6 animate-pulse" />
-              EXPLORE INNOVATION
-              <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
-            </Button>
-            <Button 
-              variant="outline" 
-              size="default" 
-              className="text-lg px-6 py-4 border-2 border-white/50 text-white bg-white/10 backdrop-blur-sm hover:bg-white/20 hover:border-white transition-all duration-300 hover:scale-105" 
-              onClick={() => scrollToSection("contact")}
-            >
-              <Microscope className="mr-2 w-5 h-5" />
-              JOIN THE REVOLUTION
-            </Button>
-          </div>
+          
 
           {/* Energy Indicators */}
-          <div className="flex justify-center space-x-8 text-white/80">
-            <div className="text-center animate-bounce" style={{animationDelay: '0s'}}>
-              <div className="w-16 h-16 mx-auto mb-2 bg-gradient-to-br from-green-400 to-blue-500 rounded-full flex items-center justify-center">
-                <Sparkles className="w-8 h-8 text-white" />
-              </div>
-              <div className="text-sm font-semibold">INNOVATIVE</div>
-            </div>
-            <div className="text-center animate-bounce" style={{animationDelay: '0.5s'}}>
-              <div className="w-16 h-16 mx-auto mb-2 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center">
-                <Zap className="w-8 h-8 text-white" />
-              </div>
-              <div className="text-sm font-semibold">DYNAMIC</div>
-            </div>
-            <div className="text-center animate-bounce" style={{animationDelay: '1s'}}>
-              <div className="w-16 h-16 mx-auto mb-2 bg-gradient-to-br from-purple-400 to-green-500 rounded-full flex items-center justify-center">
-                <TrendingUp className="w-8 h-8 text-white" />
-              </div>
-              <div className="text-sm font-semibold">PROGRESSIVE</div>
-            </div>
-          </div>
+          
         </div>
       </div>
 
