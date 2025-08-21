@@ -113,11 +113,11 @@ const HeroSection = () => {
             </Button>
             <Button 
               variant="outline" 
-              size="lg" 
-              className="text-xl px-10 py-8 border-2 border-white/50 text-white bg-white/10 backdrop-blur-sm hover:bg-white/20 hover:border-white transition-all duration-300 hover:scale-105" 
+              size="default" 
+              className="text-lg px-6 py-4 border-2 border-white/50 text-white bg-white/10 backdrop-blur-sm hover:bg-white/20 hover:border-white transition-all duration-300 hover:scale-105" 
               onClick={() => scrollToSection("contact")}
             >
-              <Microscope className="mr-3 w-6 h-6" />
+              <Microscope className="mr-2 w-5 h-5" />
               JOIN THE REVOLUTION
             </Button>
           </div>
